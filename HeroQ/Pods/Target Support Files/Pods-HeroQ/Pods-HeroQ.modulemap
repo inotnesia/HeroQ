@@ -1,0 +1,6 @@
+module Pods_HeroQ {
+  umbrella header "Pods-HeroQ-umbrella.h"
+
+  export *
+  module * { export * }
+}

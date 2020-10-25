@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFB254586A20037D007 /* AppDelegate.swift */; };
+		18CE1AFE254586A20037D007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFD254586A20037D007 /* ViewController.swift */; };
+		18CE1B01254586A20037D007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1AFF254586A20037D007 /* Main.storyboard */; };
+		18CE1B03254586A40037D007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B02254586A40037D007 /* Assets.xcassets */; };
+		18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B04254586A40037D007 /* LaunchScreen.storyboard */; };
+		18CE1B11254586A40037D007 /* HeroQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1B10254586A40037D007 /* HeroQTests.swift */; };
+		18CE1B1C254586A40037D007 /* HeroQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1B1B254586A40037D007 /* HeroQUITests.swift */; };
+		41515B5D2BA170F0D1366865 /* libPods-HeroQUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C266195FF1E2A70D29F6671A /* libPods-HeroQUITests.a */; };
+		4C590BB5DD6659ACE2337234 /* libPods-HeroQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9A4EB3F18167664EAE6BFB /* libPods-HeroQTests.a */; };
+		C53D8708E3BFE6046F6500FC /* libPods-HeroQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919A0ADE67E0B679FA313A19 /* libPods-HeroQ.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18CE1B0D254586A40037D007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CE1AF0254586A20037D007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18CE1AF7254586A20037D007;
+			remoteInfo = HeroQ;
+		};
+		18CE1B18254586A40037D007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18CE1AF0254586A20037D007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18CE1AF7254586A20037D007;
+			remoteInfo = HeroQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18CE1AF8254586A20037D007 /* HeroQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CE1AFB254586A20037D007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18CE1AFD254586A20037D007 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18CE1B00254586A20037D007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18CE1B02254586A40037D007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18CE1B05254586A40037D007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18CE1B07254586A40037D007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CE1B0C254586A40037D007 /* HeroQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CE1B10254586A40037D007 /* HeroQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroQTests.swift; sourceTree = "<group>"; };
+		18CE1B12254586A40037D007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CE1B17254586A40037D007 /* HeroQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CE1B1B254586A40037D007 /* HeroQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroQUITests.swift; sourceTree = "<group>"; };
+		18CE1B1D254586A40037D007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9A4EB3F18167664EAE6BFB /* libPods-HeroQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.release.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84DF1C736B4A1BB961FAA1C2 /* Pods-HeroQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQ.debug.xcconfig"; path = "Target Support Files/Pods-HeroQ/Pods-HeroQ.debug.xcconfig"; sourceTree = "<group>"; };
+		88804CEB4262771F44913A01 /* Pods-HeroQTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQTests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQTests/Pods-HeroQTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89B9496F2C3E0E8D59D52419 /* Pods-HeroQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQ.release.xcconfig"; path = "Target Support Files/Pods-HeroQ/Pods-HeroQ.release.xcconfig"; sourceTree = "<group>"; };
+		919A0ADE67E0B679FA313A19 /* libPods-HeroQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroQ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E3365F3E9A63FEC72D41E3 /* Pods-HeroQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQTests.release.xcconfig"; path = "Target Support Files/Pods-HeroQTests/Pods-HeroQTests.release.xcconfig"; sourceTree = "<group>"; };
+		C266195FF1E2A70D29F6671A /* libPods-HeroQUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroQUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18CE1AF5254586A20037D007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C53D8708E3BFE6046F6500FC /* libPods-HeroQ.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B09254586A40037D007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C590BB5DD6659ACE2337234 /* libPods-HeroQTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B14254586A40037D007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41515B5D2BA170F0D1366865 /* libPods-HeroQUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B2F354D1452CC541F4FC52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84DF1C736B4A1BB961FAA1C2 /* Pods-HeroQ.debug.xcconfig */,
+				89B9496F2C3E0E8D59D52419 /* Pods-HeroQ.release.xcconfig */,
+				88804CEB4262771F44913A01 /* Pods-HeroQTests.debug.xcconfig */,
+				98E3365F3E9A63FEC72D41E3 /* Pods-HeroQTests.release.xcconfig */,
+				0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */,
+				4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		18CE1AEF254586A20037D007 = {
+			isa = PBXGroup;
+			children = (
+				18CE1AFA254586A20037D007 /* HeroQ */,
+				18CE1B0F254586A40037D007 /* HeroQTests */,
+				18CE1B1A254586A40037D007 /* HeroQUITests */,
+				18CE1AF9254586A20037D007 /* Products */,
+				13B2F354D1452CC541F4FC52 /* Pods */,
+				BFD6C537B8AFD7B0590EA79A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18CE1AF9254586A20037D007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18CE1AF8254586A20037D007 /* HeroQ.app */,
+				18CE1B0C254586A40037D007 /* HeroQTests.xctest */,
+				18CE1B17254586A40037D007 /* HeroQUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18CE1AFA254586A20037D007 /* HeroQ */ = {
+			isa = PBXGroup;
+			children = (
+				18CE1AFB254586A20037D007 /* AppDelegate.swift */,
+				18CE1AFD254586A20037D007 /* ViewController.swift */,
+				18CE1AFF254586A20037D007 /* Main.storyboard */,
+				18CE1B02254586A40037D007 /* Assets.xcassets */,
+				18CE1B04254586A40037D007 /* LaunchScreen.storyboard */,
+				18CE1B07254586A40037D007 /* Info.plist */,
+			);
+			path = HeroQ;
+			sourceTree = "<group>";
+		};
+		18CE1B0F254586A40037D007 /* HeroQTests */ = {
+			isa = PBXGroup;
+			children = (
+				18CE1B10254586A40037D007 /* HeroQTests.swift */,
+				18CE1B12254586A40037D007 /* Info.plist */,
+			);
+			path = HeroQTests;
+			sourceTree = "<group>";
+		};
+		18CE1B1A254586A40037D007 /* HeroQUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18CE1B1B254586A40037D007 /* HeroQUITests.swift */,
+				18CE1B1D254586A40037D007 /* Info.plist */,
+			);
+			path = HeroQUITests;
+			sourceTree = "<group>";
+		};
+		BFD6C537B8AFD7B0590EA79A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				919A0ADE67E0B679FA313A19 /* libPods-HeroQ.a */,
+				1C9A4EB3F18167664EAE6BFB /* libPods-HeroQTests.a */,
+				C266195FF1E2A70D29F6671A /* libPods-HeroQUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18CE1AF7254586A20037D007 /* HeroQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CE1B20254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQ" */;
+			buildPhases = (
+				89121B704D8E55EB48EADC9F /* [CP] Check Pods Manifest.lock */,
+				18CE1AF4254586A20037D007 /* Sources */,
+				18CE1AF5254586A20037D007 /* Frameworks */,
+				18CE1AF6254586A20037D007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeroQ;
+			productName = HeroQ;
+			productReference = 18CE1AF8254586A20037D007 /* HeroQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18CE1B0B254586A40037D007 /* HeroQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CE1B23254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQTests" */;
+			buildPhases = (
+				CE7D492485A68F030D0C63A8 /* [CP] Check Pods Manifest.lock */,
+				18CE1B08254586A40037D007 /* Sources */,
+				18CE1B09254586A40037D007 /* Frameworks */,
+				18CE1B0A254586A40037D007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18CE1B0E254586A40037D007 /* PBXTargetDependency */,
+			);
+			name = HeroQTests;
+			productName = HeroQTests;
+			productReference = 18CE1B0C254586A40037D007 /* HeroQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18CE1B16254586A40037D007 /* HeroQUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CE1B26254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQUITests" */;
+			buildPhases = (
+				771BB23D3B9AF45160D344DA /* [CP] Check Pods Manifest.lock */,
+				18CE1B13254586A40037D007 /* Sources */,
+				18CE1B14254586A40037D007 /* Frameworks */,
+				18CE1B15254586A40037D007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18CE1B19254586A40037D007 /* PBXTargetDependency */,
+			);
+			name = HeroQUITests;
+			productName = HeroQUITests;
+			productReference = 18CE1B17254586A40037D007 /* HeroQUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18CE1AF0254586A20037D007 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Tony Hadisiswanto";
+				TargetAttributes = {
+					18CE1AF7254586A20037D007 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					18CE1B0B254586A40037D007 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 18CE1AF7254586A20037D007;
+					};
+					18CE1B16254586A40037D007 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 18CE1AF7254586A20037D007;
+					};
+				};
+			};
+			buildConfigurationList = 18CE1AF3254586A20037D007 /* Build configuration list for PBXProject "HeroQ" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18CE1AEF254586A20037D007;
+			productRefGroup = 18CE1AF9254586A20037D007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18CE1AF7254586A20037D007 /* HeroQ */,
+				18CE1B0B254586A40037D007 /* HeroQTests */,
+				18CE1B16254586A40037D007 /* HeroQUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18CE1AF6254586A20037D007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */,
+				18CE1B03254586A40037D007 /* Assets.xcassets in Resources */,
+				18CE1B01254586A20037D007 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B0A254586A40037D007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B15254586A40037D007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		771BB23D3B9AF45160D344DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroQUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89121B704D8E55EB48EADC9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroQ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE7D492485A68F030D0C63A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroQTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18CE1AF4254586A20037D007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE1AFE254586A20037D007 /* ViewController.swift in Sources */,
+				18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B08254586A40037D007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE1B11254586A40037D007 /* HeroQTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18CE1B13254586A40037D007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE1B1C254586A40037D007 /* HeroQUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18CE1B0E254586A40037D007 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18CE1AF7254586A20037D007 /* HeroQ */;
+			targetProxy = 18CE1B0D254586A40037D007 /* PBXContainerItemProxy */;
+		};
+		18CE1B19254586A40037D007 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18CE1AF7254586A20037D007 /* HeroQ */;
+			targetProxy = 18CE1B18254586A40037D007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18CE1AFF254586A20037D007 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18CE1B00254586A20037D007 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18CE1B04254586A40037D007 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18CE1B05254586A40037D007 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18CE1B1E254586A40037D007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18CE1B1F254586A40037D007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18CE1B21254586A40037D007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84DF1C736B4A1BB961FAA1C2 /* Pods-HeroQ.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18CE1B22254586A40037D007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B9496F2C3E0E8D59D52419 /* Pods-HeroQ.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18CE1B24254586A40037D007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88804CEB4262771F44913A01 /* Pods-HeroQTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroQ.app/HeroQ";
+			};
+			name = Debug;
+		};
+		18CE1B25254586A40037D007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E3365F3E9A63FEC72D41E3 /* Pods-HeroQTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroQ.app/HeroQ";
+			};
+			name = Release;
+		};
+		18CE1B27254586A40037D007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeroQ;
+			};
+			name = Debug;
+		};
+		18CE1B28254586A40037D007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeroQUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = inotnesia.HeroQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeroQ;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18CE1AF3254586A20037D007 /* Build configuration list for PBXProject "HeroQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CE1B1E254586A40037D007 /* Debug */,
+				18CE1B1F254586A40037D007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18CE1B20254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CE1B21254586A40037D007 /* Debug */,
+				18CE1B22254586A40037D007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18CE1B23254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CE1B24254586A40037D007 /* Debug */,
+				18CE1B25254586A40037D007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18CE1B26254586A40037D007 /* Build configuration list for PBXNativeTarget "HeroQUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CE1B27254586A40037D007 /* Debug */,
+				18CE1B28254586A40037D007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18CE1AF0254586A20037D007 /* Project object */;
+}
