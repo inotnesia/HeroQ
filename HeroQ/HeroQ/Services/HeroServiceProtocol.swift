@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HeroServiceProtocol {
-    func fetchHeroes(successHandler: @escaping (_ response: HeroResponse) -> Void, errorHandler: @escaping (_ error: Error) -> Void)
+    func fetchHeroes(successHandler: @escaping (_ response: [Hero]) -> Void, errorHandler: @escaping (_ error: Error) -> Void)
 }
 
 enum HeroError: Error {

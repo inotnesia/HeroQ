@@ -11,7 +11,7 @@ import Foundation
 class HeroService: HeroServiceProtocol {
     static let shared = HeroService()
     private init() {}
-    let baseAPIURL = "https://api.opendota.com/"
+    let baseAPIURL = "https://api.opendota.com"
     private let _urlSession = URLSession.shared
     
     private let _jsonDecoder: JSONDecoder = {
@@ -20,7 +20,7 @@ class HeroService: HeroServiceProtocol {
         return jsonDecoder
     }()
     
-    func fetchHeroes(successHandler: @escaping (_ response: HeroResponse) -> Void, errorHandler: @escaping (_ error: Error) -> Void) {
+    func fetchHeroes(successHandler: @escaping (_ response: [Hero]) -> Void, errorHandler: @escaping (_ error: Error) -> Void) {
         guard let url = URL(string: "\(baseAPIURL)/api/herostats") else {
             _handleError(errorHandler: errorHandler, error: HeroError.invalidEndpoint)
             return
@@ -41,9 +41,10 @@ class HeroService: HeroServiceProtocol {
                 self._handleError(errorHandler: errorHandler, error: HeroError.noData)
                 return
             }
-            
+            let str = String(decoding: data, as: UTF8.self)
+            print(str)
             do {
-                let heroResponse = try self._jsonDecoder.decode(HeroResponse.self, from: data)
+                let heroResponse = try self._jsonDecoder.decode([Hero].self, from: data)
                 DispatchQueue.main.async {
                     successHandler(heroResponse)
                 }

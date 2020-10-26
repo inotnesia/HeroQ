@@ -43,6 +43,7 @@ final class HeroListPresenter {
     
     func viewLoaded() {
         interactor.requestTitle()
+        interactor.fetchHeroes()
     }
 }
 

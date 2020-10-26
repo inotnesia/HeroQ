@@ -17,6 +17,7 @@ import RxSwift
 protocol HeroListPresenterInteractorProtocol {
     // HeroList Presenter to Interactor Protocol
     func requestTitle()
+    func fetchHeroes()
 }
 
 // MARK: -
@@ -45,5 +46,18 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     // MARK: - HeroList Presenter to Interactor Protocol
     func requestTitle() {
         presenter?.set(title: "HeroList")
+    }
+    
+    func fetchHeroes() {
+        HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
+            print("## success")
+            print(response)
+//            self?._isFetching.accept(false)
+//            self?.obsMovies.accept(response.results)
+        }) { [weak self] (error) in
+            print(error)
+//            self?._isFetching.accept(false)
+//            self?._error.accept(error.localizedDescription)
+        }
     }
 }

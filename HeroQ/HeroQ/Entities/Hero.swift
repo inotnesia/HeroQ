@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct HeroResponse: Codable {
-    let heroes: [Hero]
-}
-
 struct Hero: Codable {
     let id: Int
     let localizedName: String
@@ -19,7 +15,7 @@ struct Hero: Codable {
     let roles: [String]
     let baseAttackMin: Int
     let baseAttackMax: Int
-    let baseArmor: Int
+    let baseArmor: Float
     let moveSpeed: Int
     let baseHealth: Int
     let baseMana: Int
