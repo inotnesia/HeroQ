@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFB254586A20037D007 /* AppDelegate.swift */; };
-		18CE1AFE254586A20037D007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFD254586A20037D007 /* ViewController.swift */; };
-		18CE1B01254586A20037D007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1AFF254586A20037D007 /* Main.storyboard */; };
 		18CE1B03254586A40037D007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B02254586A40037D007 /* Assets.xcassets */; };
 		18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B04254586A40037D007 /* LaunchScreen.storyboard */; };
 		18CE1B11254586A40037D007 /* HeroQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1B10254586A40037D007 /* HeroQTests.swift */; };
@@ -30,6 +28,10 @@
 		18EB8BB12545EC6C00592A59 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB8BAF2545EC6C00592A59 /* EmptyCollectionViewCell.swift */; };
 		18EB8BB22545EC6C00592A59 /* EmptyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB8BB02545EC6C00592A59 /* EmptyCollectionViewCell.xib */; };
 		18EB8BB42545ECC800592A59 /* NSObject+IGListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB8BB32545ECC800592A59 /* NSObject+IGListDiffable.swift */; };
+		18FB22C22546B198003A6638 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB22C12546B198003A6638 /* Hero.swift */; };
+		18FB22C42546C818003A6638 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB22C32546C818003A6638 /* Extension+URL.swift */; };
+		18FB22C72546C92A003A6638 /* HeroServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB22C62546C92A003A6638 /* HeroServiceProtocol.swift */; };
+		18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB22C82546CC0E003A6638 /* HeroService.swift */; };
 		41515B5D2BA170F0D1366865 /* libPods-HeroQUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C266195FF1E2A70D29F6671A /* libPods-HeroQUITests.a */; };
 		4C590BB5DD6659ACE2337234 /* libPods-HeroQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9A4EB3F18167664EAE6BFB /* libPods-HeroQTests.a */; };
 		C53D8708E3BFE6046F6500FC /* libPods-HeroQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919A0ADE67E0B679FA313A19 /* libPods-HeroQ.a */; };
@@ -56,8 +58,6 @@
 		0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		18CE1AF8254586A20037D007 /* HeroQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CE1AFB254586A20037D007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18CE1AFD254586A20037D007 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18CE1B00254586A20037D007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CE1B02254586A40037D007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18CE1B05254586A40037D007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18CE1B07254586A40037D007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +83,10 @@
 		18EB8BAF2545EC6C00592A59 /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
 		18EB8BB02545EC6C00592A59 /* EmptyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCollectionViewCell.xib; sourceTree = "<group>"; };
 		18EB8BB32545ECC800592A59 /* NSObject+IGListDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+IGListDiffable.swift"; sourceTree = "<group>"; };
+		18FB22C12546B198003A6638 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		18FB22C32546C818003A6638 /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
+		18FB22C62546C92A003A6638 /* HeroServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroServiceProtocol.swift; sourceTree = "<group>"; };
+		18FB22C82546CC0E003A6638 /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		1C9A4EB3F18167664EAE6BFB /* libPods-HeroQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.release.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84DF1C736B4A1BB961FAA1C2 /* Pods-HeroQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQ.debug.xcconfig"; path = "Target Support Files/Pods-HeroQ/Pods-HeroQ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,11 +163,11 @@
 		18CE1AFA254586A20037D007 /* HeroQ */ = {
 			isa = PBXGroup;
 			children = (
+				18FB22C52546C8A3003A6638 /* Services */,
+				18FB22C02546B023003A6638 /* Entities */,
 				18EB8B992545E7C900592A59 /* Utils */,
 				18EB8B832545E6E300592A59 /* Modules */,
 				18CE1AFB254586A20037D007 /* AppDelegate.swift */,
-				18CE1AFD254586A20037D007 /* ViewController.swift */,
-				18CE1AFF254586A20037D007 /* Main.storyboard */,
 				18CE1B02254586A40037D007 /* Assets.xcassets */,
 				18CE1B04254586A40037D007 /* LaunchScreen.storyboard */,
 				18CE1B07254586A40037D007 /* Info.plist */,
@@ -277,6 +281,7 @@
 				18EB8BA32545E8A000592A59 /* Extension+UIView.swift */,
 				18EB8BA52545EAF500592A59 /* Extension+ListAdapter.swift */,
 				18EB8BB32545ECC800592A59 /* NSObject+IGListDiffable.swift */,
+				18FB22C32546C818003A6638 /* Extension+URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +310,23 @@
 				18EB8BB02545EC6C00592A59 /* EmptyCollectionViewCell.xib */,
 			);
 			path = Empty;
+			sourceTree = "<group>";
+		};
+		18FB22C02546B023003A6638 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18FB22C12546B198003A6638 /* Hero.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		18FB22C52546C8A3003A6638 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18FB22C62546C92A003A6638 /* HeroServiceProtocol.swift */,
+				18FB22C82546CC0E003A6638 /* HeroService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BFD6C537B8AFD7B0590EA79A /* Frameworks */ = {
@@ -427,7 +449,6 @@
 				18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */,
 				18CE1B03254586A40037D007 /* Assets.xcassets in Resources */,
 				18EB8BB22545EC6C00592A59 /* EmptyCollectionViewCell.xib in Resources */,
-				18CE1B01254586A20037D007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FB22C22546B198003A6638 /* Hero.swift in Sources */,
 				18EB8B962545E71700592A59 /* HeroListViewController.swift in Sources */,
 				18EB8BA62545EAF500592A59 /* Extension+ListAdapter.swift in Sources */,
 				18EB8B9E2545E84E00592A59 /* Extension+UIColor.swift in Sources */,
@@ -528,12 +550,14 @@
 				18EB8BB42545ECC800592A59 /* NSObject+IGListDiffable.swift in Sources */,
 				18EB8B982545E71700592A59 /* HeroListRouter.swift in Sources */,
 				18EB8B942545E71700592A59 /* HeroListPresenter.swift in Sources */,
+				18FB22C72546C92A003A6638 /* HeroServiceProtocol.swift in Sources */,
 				18EB8B932545E71700592A59 /* HeroListModule.swift in Sources */,
-				18CE1AFE254586A20037D007 /* ViewController.swift in Sources */,
 				18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */,
+				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,
 				18EB8BA02545E86B00592A59 /* Extension+UIViewController.swift in Sources */,
 				18EB8B9C2545E82800592A59 /* Extension+UICollectionView.swift in Sources */,
 				18EB8B972545E71700592A59 /* HeroListInteractor.swift in Sources */,
+				18FB22C42546C818003A6638 /* Extension+URL.swift in Sources */,
 				18EB8BAE2545EBC100592A59 /* EmptySectionController.swift in Sources */,
 				18EB8BA22545E88400592A59 /* Extension+UINavigationController.swift in Sources */,
 				18EB8BB12545EC6C00592A59 /* EmptyCollectionViewCell.swift in Sources */,
@@ -573,14 +597,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		18CE1AFF254586A20037D007 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18CE1B00254586A20037D007 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18CE1B04254586A40037D007 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

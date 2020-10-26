@@ -79,19 +79,38 @@ class HeroListViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    // MARK: - Custom Functions
     func setupView() {
         // Setup View
         collectionView.constrainEdges(to: view)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
-        view.backgroundColor = .white
-        
         view.setNeedsUpdateConstraints()
+        
+        setupNavBar()
+        setupBackButton()
+        _setupFilterButton()
+//        setupActivityIndicator()
+//        setupInfoLabel()
     }
     
-    // MARK: - Custom Functions
+    private func _setupFilterButton() {
+        let button = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(_filterButtonTapped(sender:)))
+        button.tintColor = .white
+        navigationItem.setLeftBarButton(button, animated: true)
+    }
     
     // MARK: Outlet Action
+    @objc private func _filterButtonTapped(sender: UIBarButtonItem) {
+        print("## show filter")
+//        let categoryView = CategoryView(frame: UIScreen.main.bounds)
+//        if let categories = obsCategories {
+//            categoryView.setupView(categories)
+//        }
+//
+//        categoryView.delegate = self
+//        categoryView.show(animated: true, alpha: 0.66)
+    }
 }
 
 extension HeroListViewController: HeroListPresenterViewProtocol {
