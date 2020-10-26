@@ -21,9 +21,9 @@ extension ListAdapter: ListAdapterDataSource {
     
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         switch object {
-//        case is MovieListIdentifier:
-//            let view = viewController as? MovieListProtocol
-//            return MovieListSectionController(view: view)
+        case is ImageIdentifier:
+            let view = viewController as? ImageProtocol
+            return ImageSectionController(view: view)
 //
 //        case is MovieDetailIdentifier:
 //            let view = viewController as? MovieDetailProtocol
