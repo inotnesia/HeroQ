@@ -17,8 +17,6 @@ import RxCocoa
 /// The Adapter for the HeroList module
 class HeroListAdapter: ListAdapter {
     
-    // MARK: - Constants
-    
     // MARK: Variables
     var listDiffable: [ListDiffable] = []
     var obsHeroes: BehaviorRelay<[Hero]>?
@@ -33,12 +31,9 @@ class HeroListAdapter: ListAdapter {
     // MARK: - Custom Functions
     func setupListDiffable() {
         var list: [ListDiffable] = []
-        
         if obsHeroes?.value.count ?? 0 > 0 {
             list.append(GridIdentifier(heroes: obsHeroes?.value ?? []))
         }
-        //list.append(EmptyIdentifier(height: 4))
-        
         listDiffable = list
     }
     

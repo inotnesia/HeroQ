@@ -22,7 +22,6 @@ struct Hero: Codable {
     let primaryAttr: String
     let img: String
     var imageURL: URL {
-        //TODO: Revise this
         return URL(string: "\(HeroService.shared.baseAPIURL)\(img)")!
     }
 }

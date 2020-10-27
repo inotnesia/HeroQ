@@ -16,7 +16,7 @@ import RxSwift
 // MARK: Protocols
 protocol HeroListPresenterRouterProtocol: PresenterRouterProtocol {
     // HeroList Presenter to Router Protocol
-    
+    func goToHeroDetail(_ hero: Hero)
 }
 
 // MARK: -
@@ -31,4 +31,8 @@ final class HeroListRouter: RouterProtocol {
 extension HeroListRouter: HeroListPresenterRouterProtocol {
     
     // MARK: - HeroList Presenter to Router Protocol
+    func goToHeroDetail(_ hero: Hero) {
+        //TODO: implement navigation
+        print("TODO: implement navigation")
+    }
 }

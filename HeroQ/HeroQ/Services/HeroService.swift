@@ -41,8 +41,7 @@ class HeroService: HeroServiceProtocol {
                 self._handleError(errorHandler: errorHandler, error: HeroError.noData)
                 return
             }
-            let str = String(decoding: data, as: UTF8.self)
-            print(str)
+            
             do {
                 let heroResponse = try self._jsonDecoder.decode([Hero].self, from: data)
                 DispatchQueue.main.async {

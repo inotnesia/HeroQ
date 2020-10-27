@@ -62,7 +62,6 @@ extension GridCollectionViewCell: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _items = items, _items.count > indexPath.row {
-            print("## hero = \(_items[indexPath.row].localizedName)")
             view?.didHeroTapped(_items[indexPath.row])
         }
     }

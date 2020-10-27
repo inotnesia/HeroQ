@@ -108,7 +108,6 @@ class HeroListViewController: UIViewController {
     
     // MARK: - Custom Functions
     func setupView() {
-        // Setup View
         collectionView.constrainEdges(to: view)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -140,6 +139,7 @@ class HeroListViewController: UIViewController {
     
     // MARK: Outlet Action
     @objc private func _filterButtonTapped(sender: UIBarButtonItem) {
+        //TODO: Implement filter here
         print("## show filter")
 //        let categoryView = CategoryView(frame: UIScreen.main.bounds)
 //        if let categories = obsCategories {

@@ -85,7 +85,6 @@ extension HeroListPresenter: HeroListViewPresenterProtocol {
     }
     
     func goToHeroDetail(_ hero: Hero) {
-        //TODO: implement navigation
-        print("TODO: implement navigation")
+        router.goToHeroDetail(hero)
     }
 }
