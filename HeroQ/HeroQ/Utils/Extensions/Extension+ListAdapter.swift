@@ -24,10 +24,9 @@ extension ListAdapter: ListAdapterDataSource {
         case is GridIdentifier:
             let view = viewController as? GridProtocol
             return GridSectionController(view: view)
-//
-//        case is ReviewIdentifier:
-//            let view = viewController as? ReviewProtocol
-//            return ReviewSectionController(view: view)
+            
+        case is HeroIdentifier:
+            return HeroSectionController()
 //
 //        case is TextIdentifier:
 //            let view = viewController as? TextProtocol

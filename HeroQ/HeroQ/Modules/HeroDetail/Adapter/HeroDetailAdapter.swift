@@ -32,8 +32,9 @@ class HeroDetailAdapter: ListAdapter {
     func setupListDiffable() {
         var list: [ListDiffable] = []
         
-        // Add ListDiffable here
-        list.append(EmptyIdentifier(height: 4))
+        if let hero = obsHero?.value {
+            list.append(HeroIdentifier(height: 440, hero: hero))
+        }
         
         listDiffable = list
     }

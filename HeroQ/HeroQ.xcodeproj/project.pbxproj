@@ -13,6 +13,9 @@
 		18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D72548042000ED7702 /* HeroDetailViewController.swift */; };
 		18A681E02548042000ED7702 /* HeroDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D92548042000ED7702 /* HeroDetailInteractor.swift */; };
 		18A681E12548042000ED7702 /* HeroDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681DB2548042000ED7702 /* HeroDetailRouter.swift */; };
+		18A681E62548134C00ED7702 /* HeroSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681E52548134C00ED7702 /* HeroSectionController.swift */; };
+		18A681E92548146A00ED7702 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681E72548146A00ED7702 /* HeroCollectionViewCell.swift */; };
+		18A681EA2548146A00ED7702 /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A681E82548146A00ED7702 /* HeroCollectionViewCell.xib */; };
 		18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFB254586A20037D007 /* AppDelegate.swift */; };
 		18CE1B03254586A40037D007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B02254586A40037D007 /* Assets.xcassets */; };
 		18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B04254586A40037D007 /* LaunchScreen.storyboard */; };
@@ -73,6 +76,9 @@
 		18A681D72548042000ED7702 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		18A681D92548042000ED7702 /* HeroDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailInteractor.swift; sourceTree = "<group>"; };
 		18A681DB2548042000ED7702 /* HeroDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailRouter.swift; sourceTree = "<group>"; };
+		18A681E52548134C00ED7702 /* HeroSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSectionController.swift; sourceTree = "<group>"; };
+		18A681E72548146A00ED7702 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		18A681E82548146A00ED7702 /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		18CE1AF8254586A20037D007 /* HeroQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CE1AFB254586A20037D007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CE1B02254586A40037D007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +225,16 @@
 				18A681DB2548042000ED7702 /* HeroDetailRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		18A681E42548134C00ED7702 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				18A681E52548134C00ED7702 /* HeroSectionController.swift */,
+				18A681E72548146A00ED7702 /* HeroCollectionViewCell.swift */,
+				18A681E82548146A00ED7702 /* HeroCollectionViewCell.xib */,
+			);
+			path = Hero;
 			sourceTree = "<group>";
 		};
 		18CE1AEF254586A20037D007 = {
@@ -381,6 +397,7 @@
 		18EB8BA82545EB6D00592A59 /* IGListSection */ = {
 			isa = PBXGroup;
 			children = (
+				18A681E42548134C00ED7702 /* Hero */,
 				18FB22D525477DA5003A6638 /* Grid */,
 				18FB22CC25475FA1003A6638 /* Image */,
 				18EB8BAC2545EBC100592A59 /* Empty */,
@@ -555,6 +572,7 @@
 				18CE1B03254586A40037D007 /* Assets.xcassets in Resources */,
 				18FB22D225475FC5003A6638 /* ImageCollectionViewCell.xib in Resources */,
 				18FB22DB25479908003A6638 /* GridCollectionViewCell.xib in Resources */,
+				18A681EA2548146A00ED7702 /* HeroCollectionViewCell.xib in Resources */,
 				18EB8BB22545EC6C00592A59 /* EmptyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,10 +680,12 @@
 				18EB8B982545E71700592A59 /* HeroListRouter.swift in Sources */,
 				18EB8B942545E71700592A59 /* HeroListPresenter.swift in Sources */,
 				18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */,
+				18A681E92548146A00ED7702 /* HeroCollectionViewCell.swift in Sources */,
 				18FB22C72546C92A003A6638 /* HeroServiceProtocol.swift in Sources */,
 				18EB8B932545E71700592A59 /* HeroListModule.swift in Sources */,
 				18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */,
 				18FB22DA25479908003A6638 /* GridCollectionViewCell.swift in Sources */,
+				18A681E62548134C00ED7702 /* HeroSectionController.swift in Sources */,
 				18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */,
 				18FB22D125475FC5003A6638 /* ImageCollectionViewCell.swift in Sources */,
 				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,

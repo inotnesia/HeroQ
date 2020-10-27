@@ -10,6 +10,7 @@
 
 // MARK: Imports
 import SwiftyVIPER
+import RxCocoa
 
 // MARK: -
 
@@ -43,6 +44,6 @@ final class HeroDetailModule: ModuleProtocol {
         presenter.view = view
         router.viewController = view
         interactor.presenter = presenter
-        interactor.obsHero?.accept(hero)
+        interactor.obsHero = BehaviorRelay(value: hero)
     }
 }

@@ -36,7 +36,11 @@ final class HeroDetailInteractor {
     }
     
     func setupObserver() {
-        _ = obsHero?.asObservable().subscribe({ (_) in
+//        _ = obsHero?.asObservable().subscribe({ (_) in
+//            self.presenter?.performUpdates(animated: true)
+//        }).disposed(by: _disposeBag)
+        
+        _ = obsHero?.asObservable().subscribe(onNext: { (newValue) in
             self.presenter?.performUpdates(animated: true)
         }).disposed(by: _disposeBag)
     }
@@ -47,6 +51,7 @@ extension HeroDetailInteractor: HeroDetailPresenterInteractorProtocol {
     // MARK: - HeroDetail Presenter to Interactor Protocol
     func requestTitle() {
         presenter?.set(title: "Hero Detail")
+        presenter?.performUpdates(animated: true)
     }
     
     func getObsHero() -> BehaviorRelay<Hero>? {

@@ -50,8 +50,6 @@ class GridSectionController: ListSectionController {
 // MARK: - Grid
 class GridIdentifier: NSObject {
     
-    // MARK: - Constants
-    
     // MARK: Variables
     var heroes: [Hero]
     

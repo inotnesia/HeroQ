@@ -1,8 +1,8 @@
 //
-//  EmptySectionController.swift
+//  HeroSectionController.swift
 //  Project: HeroQ
 //
-//  Created by Tony Hadisiswanto on 26/10/20.
+//  Created by Tony Hadisiswanto on 27/10/20.
 //  Copyright © 2020 Tony Hadisiswanto. All rights reserved.
 //
 
@@ -10,11 +10,24 @@
 import UIKit
 import IGListKit
 
-// MARK: - EmptySectionController
-class EmptySectionController: ListSectionController {
+// MARK: Protocols
+//protocol HeroProtocol {
+//    func clickedButton(_ id: String)
+//}
+
+// MARK: - HeroSectionController
+class HeroSectionController: ListSectionController {
+    
+    // MARK: - Constants
     
     // MARK: Variables
-    private var identifier: EmptyIdentifier?
+    private var identifier: HeroIdentifier?
+    //var view: HeroProtocol?
+    
+    //convenience override init() {
+    //convenience init(view: HeroProtocol?) {
+        //self.init()
+    //}
     
     override func sizeForItem(at index: Int) -> CGSize {
         guard let collectionContext = collectionContext else { return CGSize.zero }
@@ -23,28 +36,27 @@ class EmptySectionController: ListSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        guard let cell = collectionContext?.dequeueReusableCell(withNibName: String(describing: EmptyCollectionViewCell.self), bundle: nil, for: self, at: index) as? EmptyCollectionViewCell
+        guard let cell = collectionContext?.dequeueReusableCell(withNibName: String(describing: HeroCollectionViewCell.self), bundle: nil, for: self, at: index) as? HeroCollectionViewCell
             else { return UICollectionViewCell() }
-        cell.backgroundColor = identifier?.backgroundColor
+        cell.identifier = identifier
         return cell
     }
     
     override func didUpdate(to object: Any) {
-        identifier = object as? EmptyIdentifier
+        identifier = object as? HeroIdentifier
     }
-    
 }
 
-// MARK: - Empty
-class EmptyIdentifier: NSObject {
+// MARK: - Hero
+class HeroIdentifier: NSObject {
     
     // MARK: Variables
     var height: CGFloat
-    var backgroundColor: UIColor
+    var hero: Hero
     
-    init(height: CGFloat = 0, backgroundColor: UIColor = .clear) {
+    init(height: CGFloat = 0, hero: Hero) {
         self.height = height
-        self.backgroundColor = backgroundColor
+        self.hero = hero
         super.init()
     }
     
@@ -53,7 +65,7 @@ class EmptyIdentifier: NSObject {
     }
     
     override func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard let object = object as? EmptyIdentifier else { return false }
+        guard let object = object as? HeroIdentifier else { return false }
         return self === object
     }
 }
