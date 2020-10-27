@@ -21,13 +21,9 @@ extension ListAdapter: ListAdapterDataSource {
     
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         switch object {
-        case is ImageIdentifier:
-            let view = viewController as? ImageProtocol
-            return ImageSectionController(view: view)
-//
-//        case is MovieDetailIdentifier:
-//            let view = viewController as? MovieDetailProtocol
-//            return MovieDetailSectionController(view: view)
+        case is GridIdentifier:
+            let view = viewController as? GridProtocol
+            return GridSectionController(view: view)
 //
 //        case is ReviewIdentifier:
 //            let view = viewController as? ReviewProtocol

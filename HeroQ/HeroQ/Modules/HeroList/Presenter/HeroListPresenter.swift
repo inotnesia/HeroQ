@@ -11,16 +11,22 @@
 // MARK: Imports
 import UIKit
 import SwiftyVIPER
-import RxSwift
+import RxCocoa
 
 // MARK: Protocols
 protocol HeroListViewPresenterProtocol: ViewPresenterProtocol {
     // HeroList View to Presenter Protocol
+    func getObsHeroes() -> BehaviorRelay<[Hero]>
+    func getFetchingState() -> Driver<Bool>
+    func getErrorState() -> Bool
+    func getErrorInfo() -> Driver<String?>
+    func goToHeroDetail(_ hero: Hero)
 }
 
 protocol HeroListInteractorPresenterProtocol: class {
     // HeroList Interactor to Presenter Protocol
     func set(title: String?)
+    func performUpdates(animated: Bool)
 }
 
 // MARK: -
@@ -53,9 +59,33 @@ extension HeroListPresenter: HeroListInteractorPresenterProtocol {
     func set(title: String?) {
         view?.set(title: title)
     }
+    
+    func performUpdates(animated: Bool) {
+        view?.performUpdates(animated: animated)
+    }
 }
 
 extension HeroListPresenter: HeroListViewPresenterProtocol {
     
     // MARK: - HeroList View to Presenter Protocol
+    func getObsHeroes() -> BehaviorRelay<[Hero]> {
+        return interactor.getObsHeroes()
+    }
+    
+    func getFetchingState() -> Driver<Bool> {
+        return interactor.getFetchingState()
+    }
+    
+    func getErrorState() -> Bool {
+        return interactor.getErrorState()
+    }
+    
+    func getErrorInfo() -> Driver<String?> {
+        return interactor.getErrorInfo()
+    }
+    
+    func goToHeroDetail(_ hero: Hero) {
+        //TODO: implement navigation
+        print("TODO: implement navigation")
+    }
 }

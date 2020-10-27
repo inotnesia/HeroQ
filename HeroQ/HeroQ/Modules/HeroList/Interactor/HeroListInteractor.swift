@@ -11,6 +11,7 @@
 // MARK: Imports
 import Foundation
 import SwiftyVIPER
+import RxCocoa
 import RxSwift
 
 // MARK: Protocols
@@ -18,6 +19,10 @@ protocol HeroListPresenterInteractorProtocol {
     // HeroList Presenter to Interactor Protocol
     func requestTitle()
     func fetchHeroes()
+    func getObsHeroes() -> BehaviorRelay<[Hero]>
+    func getFetchingState() -> Driver<Bool>
+    func getErrorState() -> Bool
+    func getErrorInfo() -> Driver<String?>
 }
 
 // MARK: -
@@ -26,18 +31,32 @@ protocol HeroListPresenterInteractorProtocol {
 final class HeroListInteractor {
     
     // MARK: - Variables
-    private let disposeBag = DisposeBag()
+    private let _disposeBag = DisposeBag()
+    private let _isFetching = BehaviorRelay<Bool>(value: false)
+    private let _error = BehaviorRelay<String?>(value: nil)
     weak var presenter: HeroListInteractorPresenterProtocol?
+    lazy var obsHeroes: BehaviorRelay<[Hero]> = BehaviorRelay(value: [])
+    
+    var isFetching: Driver<Bool> {
+        return _isFetching.asDriver()
+    }
+    
+    var error: Driver<String?> {
+        return _error.asDriver()
+    }
+    
+    var hasError: Bool {
+        return _error.value != nil
+    }
     
     init() {
         setupObserver()
     }
     
     func setupObserver() {
-//        _ = paramsChangePassword.asObservable().subscribe(onNext: { (newValue) in
-//            // update value
-//            print(newValue)
-//        }).disposed(by: disposeBag)
+        _ = obsHeroes.asObservable().subscribe({ (_) in
+            self.presenter?.performUpdates(animated: true)
+        }).disposed(by: _disposeBag)
     }
 }
 
@@ -50,14 +69,27 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     
     func fetchHeroes() {
         HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
-            print("## success")
-            print(response)
-//            self?._isFetching.accept(false)
-//            self?.obsMovies.accept(response.results)
+            self?._isFetching.accept(false)
+            self?.obsHeroes.accept(response)
         }) { [weak self] (error) in
-            print(error)
-//            self?._isFetching.accept(false)
-//            self?._error.accept(error.localizedDescription)
+            self?._isFetching.accept(false)
+            self?._error.accept(error.localizedDescription)
         }
+    }
+    
+    func getObsHeroes() -> BehaviorRelay<[Hero]> {
+        return obsHeroes
+    }
+    
+    func getFetchingState() -> Driver<Bool> {
+        return isFetching
+    }
+    
+    func getErrorState() -> Bool {
+        return hasError
+    }
+    
+    func getErrorInfo() -> Driver<String?> {
+        return error
     }
 }

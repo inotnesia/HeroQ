@@ -11,7 +11,6 @@ import Kingfisher
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
-    var view: ImageProtocol?
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,8 +21,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func setupView(imageURL: URL, title: String) {
         imageView.kf.setImage(with: imageURL)
+        imageView.clipsToBounds = true
         titleLabel.text = title
-        cardView.layer.cornerRadius = 4
-        layoutIfNeeded()
+        layer.cornerRadius = 8
     }
 }

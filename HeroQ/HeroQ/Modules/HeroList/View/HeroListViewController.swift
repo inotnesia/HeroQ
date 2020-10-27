@@ -11,12 +11,14 @@
 // MARK: Imports
 import UIKit
 import SwiftyVIPER
+import RxCocoa
 import RxSwift
 
 // MARK: Protocols
 protocol HeroListPresenterViewProtocol: class {
     // HeroList Presenter to View Protocol
     func set(title: String?)
+    func performUpdates(animated: Bool)
 }
 
 // MARK: -
@@ -26,9 +28,10 @@ class HeroListViewController: UIViewController {
     
     // MARK: - Constants
     let presenter: HeroListViewPresenterProtocol
-    let disposeBag = DisposeBag()
+    private let _disposeBag = DisposeBag()
     
     // MARK: Variables
+    private var _obsHeroes: BehaviorRelay<[Hero]>?
     
     lazy var adapter: HeroListAdapter = {
         let aAdapter = HeroListAdapter(viewController: self)
@@ -37,6 +40,24 @@ class HeroListViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         return UICollectionView.createView(with: .heroQBgColor)
+    }()
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+    
+    lazy var infoLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.frame.width - 32, height: 40))
+        label.backgroundColor = .clear
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textAlignment = .center
+        label.center = view.center
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        return label
     }()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -63,8 +84,14 @@ class HeroListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _obsHeroes = presenter.getObsHeroes()
+        adapter.obsHeroes = _obsHeroes
+        
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
+        
+        view.addSubview(activityIndicator)
+        view.addSubview(infoLabel)
         
         setupView()
         presenter.viewLoaded()
@@ -90,14 +117,25 @@ class HeroListViewController: UIViewController {
         setupNavBar()
         setupBackButton()
         _setupFilterButton()
-//        setupActivityIndicator()
-//        setupInfoLabel()
+        _setupActivityIndicator()
+        _setupInfoLabel()
     }
     
     private func _setupFilterButton() {
         let button = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(_filterButtonTapped(sender:)))
         button.tintColor = .white
         navigationItem.setLeftBarButton(button, animated: true)
+    }
+    
+    private func _setupActivityIndicator() {
+        presenter.getFetchingState().drive(activityIndicator.rx.isAnimating).disposed(by: _disposeBag)
+    }
+    
+    private func _setupInfoLabel() {
+        presenter.getErrorInfo().drive(onNext: {[unowned self] (error) in
+            self.infoLabel.isHidden = !self.presenter.getErrorState()
+            self.infoLabel.text = error
+        }).disposed(by: _disposeBag)
     }
     
     // MARK: Outlet Action
@@ -118,5 +156,18 @@ extension HeroListViewController: HeroListPresenterViewProtocol {
     // MARK: - HeroList Presenter to View Protocol
     func set(title: String?) {
         self.title = title
+    }
+    
+    func performUpdates(animated: Bool) {
+        adapter.setupListDiffable()
+        adapter.performUpdates(animated: animated, completion: nil)
+    }
+}
+
+extension HeroListViewController: GridProtocol {
+    
+    // MARK: - GridProtocol
+    func didHeroTapped(_ hero: Hero) {
+        presenter.goToHeroDetail(hero)
     }
 }

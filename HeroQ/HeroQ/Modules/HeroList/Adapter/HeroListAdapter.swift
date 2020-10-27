@@ -12,8 +12,6 @@
 import IGListKit
 import RxCocoa
 
-// MARK: Protocols
-
 // MARK: -
 
 /// The Adapter for the HeroList module
@@ -23,6 +21,7 @@ class HeroListAdapter: ListAdapter {
     
     // MARK: Variables
     var listDiffable: [ListDiffable] = []
+    var obsHeroes: BehaviorRelay<[Hero]>?
     
     // MARK: Inits
     init(viewController: UIViewController?) {
@@ -35,8 +34,10 @@ class HeroListAdapter: ListAdapter {
     func setupListDiffable() {
         var list: [ListDiffable] = []
         
-        // Add ListDiffable here
-        list.append(EmptyIdentifier(height: 4))
+        if obsHeroes?.value.count ?? 0 > 0 {
+            list.append(GridIdentifier(heroes: obsHeroes?.value ?? []))
+        }
+        //list.append(EmptyIdentifier(height: 4))
         
         listDiffable = list
     }
