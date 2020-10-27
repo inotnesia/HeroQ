@@ -32,7 +32,6 @@ extension HeroListRouter: HeroListPresenterRouterProtocol {
     
     // MARK: - HeroList Presenter to Router Protocol
     func goToHeroDetail(_ hero: Hero) {
-        //TODO: implement navigation
-        print("TODO: implement navigation")
+        HeroDetailModule(hero).push(from: viewController?.navigationController)
     }
 }

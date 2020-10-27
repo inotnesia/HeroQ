@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D12548042000ED7702 /* HeroDetailModule.swift */; };
+		18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D32548042000ED7702 /* HeroDetailPresenter.swift */; };
+		18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D52548042000ED7702 /* HeroDetailAdapter.swift */; };
+		18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D72548042000ED7702 /* HeroDetailViewController.swift */; };
+		18A681E02548042000ED7702 /* HeroDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D92548042000ED7702 /* HeroDetailInteractor.swift */; };
+		18A681E12548042000ED7702 /* HeroDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681DB2548042000ED7702 /* HeroDetailRouter.swift */; };
 		18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE1AFB254586A20037D007 /* AppDelegate.swift */; };
 		18CE1B03254586A40037D007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B02254586A40037D007 /* Assets.xcassets */; };
 		18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE1B04254586A40037D007 /* LaunchScreen.storyboard */; };
@@ -61,6 +67,12 @@
 
 /* Begin PBXFileReference section */
 		0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A681D12548042000ED7702 /* HeroDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailModule.swift; sourceTree = "<group>"; };
+		18A681D32548042000ED7702 /* HeroDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailPresenter.swift; sourceTree = "<group>"; };
+		18A681D52548042000ED7702 /* HeroDetailAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailAdapter.swift; sourceTree = "<group>"; };
+		18A681D72548042000ED7702 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		18A681D92548042000ED7702 /* HeroDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailInteractor.swift; sourceTree = "<group>"; };
+		18A681DB2548042000ED7702 /* HeroDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailRouter.swift; sourceTree = "<group>"; };
 		18CE1AF8254586A20037D007 /* HeroQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CE1AFB254586A20037D007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CE1B02254586A40037D007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +160,67 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		18A681CF2548042000ED7702 /* HeroDetail */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D02548042000ED7702 /* Module */,
+				18A681D22548042000ED7702 /* Presenter */,
+				18A681D42548042000ED7702 /* Adapter */,
+				18A681D62548042000ED7702 /* View */,
+				18A681D82548042000ED7702 /* Interactor */,
+				18A681DA2548042000ED7702 /* Router */,
+			);
+			path = HeroDetail;
+			sourceTree = "<group>";
+		};
+		18A681D02548042000ED7702 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D12548042000ED7702 /* HeroDetailModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		18A681D22548042000ED7702 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D32548042000ED7702 /* HeroDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18A681D42548042000ED7702 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D52548042000ED7702 /* HeroDetailAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		18A681D62548042000ED7702 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D72548042000ED7702 /* HeroDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18A681D82548042000ED7702 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				18A681D92548042000ED7702 /* HeroDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		18A681DA2548042000ED7702 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				18A681DB2548042000ED7702 /* HeroDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		18CE1AEF254586A20037D007 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +279,7 @@
 		18EB8B832545E6E300592A59 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				18A681CF2548042000ED7702 /* HeroDetail */,
 				18EB8B862545E71700592A59 /* HeroList */,
 			);
 			path = Modules;
@@ -577,16 +651,22 @@
 			files = (
 				18FB22C22546B198003A6638 /* Hero.swift in Sources */,
 				18EB8B962545E71700592A59 /* HeroListViewController.swift in Sources */,
+				18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */,
+				18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */,
+				18A681E12548042000ED7702 /* HeroDetailRouter.swift in Sources */,
 				18EB8BA62545EAF500592A59 /* Extension+ListAdapter.swift in Sources */,
+				18A681E02548042000ED7702 /* HeroDetailInteractor.swift in Sources */,
 				18EB8B9E2545E84E00592A59 /* Extension+UIColor.swift in Sources */,
 				18EB8B952545E71700592A59 /* HeroListAdapter.swift in Sources */,
 				18EB8BB42545ECC800592A59 /* NSObject+IGListDiffable.swift in Sources */,
 				18EB8B982545E71700592A59 /* HeroListRouter.swift in Sources */,
 				18EB8B942545E71700592A59 /* HeroListPresenter.swift in Sources */,
+				18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */,
 				18FB22C72546C92A003A6638 /* HeroServiceProtocol.swift in Sources */,
 				18EB8B932545E71700592A59 /* HeroListModule.swift in Sources */,
 				18CE1AFC254586A20037D007 /* AppDelegate.swift in Sources */,
 				18FB22DA25479908003A6638 /* GridCollectionViewCell.swift in Sources */,
+				18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */,
 				18FB22D125475FC5003A6638 /* ImageCollectionViewCell.swift in Sources */,
 				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,
 				18EB8BA02545E86B00592A59 /* Extension+UIViewController.swift in Sources */,
