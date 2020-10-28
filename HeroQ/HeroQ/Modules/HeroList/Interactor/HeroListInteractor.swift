@@ -23,6 +23,7 @@ protocol HeroListPresenterInteractorProtocol {
     func getFetchingState() -> Driver<Bool>
     func getErrorState() -> Bool
     func getErrorInfo() -> Driver<String?>
+    func getSimilarHeroes(_ hero: Hero) -> [Hero]
 }
 
 // MARK: -
@@ -91,5 +92,21 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     
     func getErrorInfo() -> Driver<String?> {
         return error
+    }
+    
+    func getSimilarHeroes(_ hero: Hero) -> [Hero] {
+        var arrHeroes = obsHeroes.value.filter {
+                $0.id != hero.id &&
+                $0.primaryAttr == hero.primaryAttr &&
+                $0.roles.contains(hero.roles.first ?? "")
+        }
+        if hero.primaryAttr == "agi" {
+            arrHeroes.sort { $0.moveSpeed > $1.moveSpeed }
+        } else if hero.primaryAttr == "str" {
+            arrHeroes.sort { $0.baseAttackMax > $1.baseAttackMax }
+        } else {
+            arrHeroes.sort { $0.baseMana > $1.baseMana }
+        }
+        return arrHeroes.count > 3 ? Array(arrHeroes.prefix(3)) : arrHeroes
     }
 }

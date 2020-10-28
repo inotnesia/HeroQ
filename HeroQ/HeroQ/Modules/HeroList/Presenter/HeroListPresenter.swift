@@ -20,7 +20,8 @@ protocol HeroListViewPresenterProtocol: ViewPresenterProtocol {
     func getFetchingState() -> Driver<Bool>
     func getErrorState() -> Bool
     func getErrorInfo() -> Driver<String?>
-    func goToHeroDetail(_ hero: Hero)
+    func goToHeroDetail(hero: Hero, similarHeroes: [Hero])
+    func getSimilarHeroes(_ hero: Hero) -> [Hero]
 }
 
 protocol HeroListInteractorPresenterProtocol: class {
@@ -84,7 +85,11 @@ extension HeroListPresenter: HeroListViewPresenterProtocol {
         return interactor.getErrorInfo()
     }
     
-    func goToHeroDetail(_ hero: Hero) {
-        router.goToHeroDetail(hero)
+    func goToHeroDetail(hero: Hero, similarHeroes: [Hero]) {
+        router.goToHeroDetail(hero: hero, similarHeroes: similarHeroes)
+    }
+    
+    func getSimilarHeroes(_ hero: Hero) -> [Hero] {
+        return interactor.getSimilarHeroes(hero)
     }
 }

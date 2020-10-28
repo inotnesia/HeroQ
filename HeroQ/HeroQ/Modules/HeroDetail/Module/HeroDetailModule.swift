@@ -40,10 +40,11 @@ final class HeroDetailModule: ModuleProtocol {
     }
     
     // MARK: Inits
-    init(_ hero: Hero) {
+    init(hero: Hero, heroes: [Hero]) {
         presenter.view = view
         router.viewController = view
         interactor.presenter = presenter
         interactor.obsHero = BehaviorRelay(value: hero)
+        interactor.obsHeroes.accept(heroes)
     }
 }

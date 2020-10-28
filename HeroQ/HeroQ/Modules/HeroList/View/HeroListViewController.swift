@@ -168,6 +168,7 @@ extension HeroListViewController: GridProtocol {
     
     // MARK: - GridProtocol
     func didHeroTapped(_ hero: Hero) {
-        presenter.goToHeroDetail(hero)
+        let heroes = presenter.getSimilarHeroes(hero)
+        presenter.goToHeroDetail(hero: hero, similarHeroes: heroes)
     }
 }

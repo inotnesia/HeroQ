@@ -19,6 +19,7 @@ protocol HeroDetailPresenterInteractorProtocol {
     // HeroDetail Presenter to Interactor Protocol
     func requestTitle()
     func getObsHero() -> BehaviorRelay<Hero>?
+    func getObsHeroes() -> BehaviorRelay<[Hero]>
 }
 
 // MARK: -
@@ -30,17 +31,18 @@ final class HeroDetailInteractor {
     private let _disposeBag = DisposeBag()
     weak var presenter: HeroDetailInteractorPresenterProtocol?
     var obsHero: BehaviorRelay<Hero>?
+    lazy var obsHeroes: BehaviorRelay<[Hero]> = BehaviorRelay(value: [])
     
     init() {
         setupObserver()
     }
     
     func setupObserver() {
-//        _ = obsHero?.asObservable().subscribe({ (_) in
-//            self.presenter?.performUpdates(animated: true)
-//        }).disposed(by: _disposeBag)
+        _ = obsHero?.asObservable().subscribe({ (_) in
+            self.presenter?.performUpdates(animated: true)
+        }).disposed(by: _disposeBag)
         
-        _ = obsHero?.asObservable().subscribe(onNext: { (newValue) in
+        _ = obsHeroes.asObservable().subscribe({ (_) in
             self.presenter?.performUpdates(animated: true)
         }).disposed(by: _disposeBag)
     }
@@ -56,5 +58,9 @@ extension HeroDetailInteractor: HeroDetailPresenterInteractorProtocol {
     
     func getObsHero() -> BehaviorRelay<Hero>? {
         return obsHero
+    }
+    
+    func getObsHeroes() -> BehaviorRelay<[Hero]> {
+        return obsHeroes
     }
 }

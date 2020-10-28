@@ -23,7 +23,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var roleLabel: UILabel!
-    //--
+    
     @IBOutlet weak var attackImageView: UIImageView!
     @IBOutlet weak var attackLabel: UILabel!
     
@@ -32,7 +32,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var speedImageView: UIImageView!
     @IBOutlet weak var speedLabel: UILabel!
-    //--
+    
     @IBOutlet weak var healthImageView: UIImageView!
     @IBOutlet weak var healthLabel: UILabel!
     
@@ -48,6 +48,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
     
     func setupView(_ hero: Hero) {
         titleLabel.text = hero.localizedName
+        titleLabel.textColor = .heroQPrimaryColor
         imageView.kf.setImage(with: hero.imageURL)
         imageView.layer.cornerRadius = 8
         roleLabel.text = hero.roles.joined(separator: " - ")

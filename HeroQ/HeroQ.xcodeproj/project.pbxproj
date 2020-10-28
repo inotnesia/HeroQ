@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187A29082548EF38006D02D2 /* SimilarHeroesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A29072548EF37006D02D2 /* SimilarHeroesSectionController.swift */; };
+		187A290B2548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A29092548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift */; };
+		187A290C2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187A290A2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib */; };
 		18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D12548042000ED7702 /* HeroDetailModule.swift */; };
 		18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D32548042000ED7702 /* HeroDetailPresenter.swift */; };
 		18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D52548042000ED7702 /* HeroDetailAdapter.swift */; };
@@ -70,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		187A29072548EF37006D02D2 /* SimilarHeroesSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimilarHeroesSectionController.swift; sourceTree = "<group>"; };
+		187A29092548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarHeroesCollectionViewCell.swift; sourceTree = "<group>"; };
+		187A290A2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarHeroesCollectionViewCell.xib; sourceTree = "<group>"; };
 		18A681D12548042000ED7702 /* HeroDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailModule.swift; sourceTree = "<group>"; };
 		18A681D32548042000ED7702 /* HeroDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailPresenter.swift; sourceTree = "<group>"; };
 		18A681D52548042000ED7702 /* HeroDetailAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailAdapter.swift; sourceTree = "<group>"; };
@@ -164,6 +170,16 @@
 				4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		187A29062548EF37006D02D2 /* SimilarHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				187A29072548EF37006D02D2 /* SimilarHeroesSectionController.swift */,
+				187A29092548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift */,
+				187A290A2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib */,
+			);
+			path = SimilarHeroes;
 			sourceTree = "<group>";
 		};
 		18A681CF2548042000ED7702 /* HeroDetail */ = {
@@ -397,6 +413,7 @@
 		18EB8BA82545EB6D00592A59 /* IGListSection */ = {
 			isa = PBXGroup;
 			children = (
+				187A29062548EF37006D02D2 /* SimilarHeroes */,
 				18A681E42548134C00ED7702 /* Hero */,
 				18FB22D525477DA5003A6638 /* Grid */,
 				18FB22CC25475FA1003A6638 /* Image */,
@@ -572,6 +589,7 @@
 				18CE1B03254586A40037D007 /* Assets.xcassets in Resources */,
 				18FB22D225475FC5003A6638 /* ImageCollectionViewCell.xib in Resources */,
 				18FB22DB25479908003A6638 /* GridCollectionViewCell.xib in Resources */,
+				187A290C2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib in Resources */,
 				18A681EA2548146A00ED7702 /* HeroCollectionViewCell.xib in Resources */,
 				18EB8BB22545EC6C00592A59 /* EmptyCollectionViewCell.xib in Resources */,
 			);
@@ -687,6 +705,7 @@
 				18FB22DA25479908003A6638 /* GridCollectionViewCell.swift in Sources */,
 				18A681E62548134C00ED7702 /* HeroSectionController.swift in Sources */,
 				18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */,
+				187A290B2548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift in Sources */,
 				18FB22D125475FC5003A6638 /* ImageCollectionViewCell.swift in Sources */,
 				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,
 				18EB8BA02545E86B00592A59 /* Extension+UIViewController.swift in Sources */,
@@ -698,6 +717,7 @@
 				18EB8BA22545E88400592A59 /* Extension+UINavigationController.swift in Sources */,
 				18EB8BB12545EC6C00592A59 /* EmptyCollectionViewCell.swift in Sources */,
 				18EB8BA42545E8A000592A59 /* Extension+UIView.swift in Sources */,
+				187A29082548EF38006D02D2 /* SimilarHeroesSectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

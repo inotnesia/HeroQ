@@ -11,12 +11,10 @@
 // MARK: Imports
 import UIKit
 import SwiftyVIPER
-import RxSwift
 
 // MARK: Protocols
 protocol HeroDetailPresenterRouterProtocol: PresenterRouterProtocol {
     // HeroDetail Presenter to Router Protocol
-    
 }
 
 // MARK: -

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SimilarHeroesCollectionViewCell" customModule="HeroQ" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bln-s7-tnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-hM-Odc">
+                                <rect key="frame" x="16" y="0.0" width="288" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xSL-Jd-PJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mzy-2J-v4K">
+                                <rect key="frame" x="0.0" y="36" width="320" height="114"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oqI-Ab-gGf">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mzy-2J-v4K" secondAttribute="trailing" id="5i0-0Z-3UI"/>
+                            <constraint firstItem="mzy-2J-v4K" firstAttribute="top" secondItem="DPj-hM-Odc" secondAttribute="bottom" constant="16" id="75N-LJ-pAH"/>
+                            <constraint firstItem="DPj-hM-Odc" firstAttribute="leading" secondItem="bln-s7-tnh" secondAttribute="leading" constant="16" id="Cea-2N-Ljr"/>
+                            <constraint firstAttribute="bottom" secondItem="mzy-2J-v4K" secondAttribute="bottom" id="IPK-eW-B5k"/>
+                            <constraint firstItem="DPj-hM-Odc" firstAttribute="top" secondItem="bln-s7-tnh" secondAttribute="top" id="WeH-9R-SVQ"/>
+                            <constraint firstItem="mzy-2J-v4K" firstAttribute="leading" secondItem="bln-s7-tnh" secondAttribute="leading" id="ZIN-nr-07j"/>
+                            <constraint firstAttribute="trailing" secondItem="DPj-hM-Odc" secondAttribute="trailing" constant="16" id="le4-W0-Sb0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bln-s7-tnh" secondAttribute="bottom" id="IYk-MU-051"/>
+                <constraint firstItem="bln-s7-tnh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TIZ-Z4-LHn"/>
+                <constraint firstItem="bln-s7-tnh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fxG-un-wL1"/>
+                <constraint firstAttribute="trailing" secondItem="bln-s7-tnh" secondAttribute="trailing" id="sFk-9Y-ghk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="cardView" destination="bln-s7-tnh" id="RhK-WW-okD"/>
+                <outlet property="collectionView" destination="mzy-2J-v4K" id="Rlt-d7-2nD"/>
+                <outlet property="titleLabel" destination="DPj-hM-Odc" id="okv-4Q-ocZ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

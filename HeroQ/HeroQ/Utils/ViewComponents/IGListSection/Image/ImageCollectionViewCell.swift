@@ -19,10 +19,15 @@ class ImageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupView(imageURL: URL, title: String) {
+    func setupView(imageURL: URL, title: String, isBorder: Bool = false) {
         imageView.kf.setImage(with: imageURL)
         imageView.clipsToBounds = true
         titleLabel.text = title
+        titleLabel.textColor = .darkGray
         layer.cornerRadius = 8
+        if isBorder {
+            layer.borderWidth = 0.5
+            layer.borderColor = UIColor.lightGray.cgColor
+        }
     }
 }

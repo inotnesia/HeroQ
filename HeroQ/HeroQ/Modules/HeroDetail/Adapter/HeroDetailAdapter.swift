@@ -20,6 +20,7 @@ class HeroDetailAdapter: ListAdapter {
     // MARK: Variables
     var listDiffable: [ListDiffable] = []
     var obsHero: BehaviorRelay<Hero>?
+    var obsHeroes: BehaviorRelay<[Hero]>?
     
     // MARK: Inits
     init(viewController: UIViewController?) {
@@ -34,6 +35,9 @@ class HeroDetailAdapter: ListAdapter {
         
         if let hero = obsHero?.value {
             list.append(HeroIdentifier(height: 440, hero: hero))
+        }
+        if obsHeroes?.value.count ?? 0 > 0 {
+            list.append(SimilarHeroesIdentifier(height: 140, heroes: obsHeroes?.value ?? []))
         }
         
         listDiffable = list

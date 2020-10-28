@@ -32,6 +32,7 @@ class HeroDetailViewController: UIViewController {
     
     // MARK: Variables
     private var _obsHero: BehaviorRelay<Hero>?
+    private var _obsHeroes: BehaviorRelay<[Hero]>?
     
     lazy var adapter: HeroDetailAdapter = {
         let aAdapter = HeroDetailAdapter(viewController: self)
@@ -39,7 +40,7 @@ class HeroDetailViewController: UIViewController {
     }()
     
     lazy var collectionView: UICollectionView = {
-        return UICollectionView.createView(with: .heroQBgColor)
+        return UICollectionView.createView(with: .white)
     }()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -69,6 +70,9 @@ class HeroDetailViewController: UIViewController {
         _obsHero = presenter.getObsHero()
         adapter.obsHero = _obsHero
         
+        _obsHeroes = presenter.getObsHeroes()
+        adapter.obsHeroes = _obsHeroes
+        
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         
@@ -85,6 +89,7 @@ class HeroDetailViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    // MARK: - Custom Functions
     func setupView() {
         collectionView.constrainEdges(to: view)
         collectionView.showsHorizontalScrollIndicator = false
@@ -94,10 +99,6 @@ class HeroDetailViewController: UIViewController {
         setupNavBar()
         setupBackButton()
     }
-    
-    // MARK: - Custom Functions
-    
-    // MARK: Outlet Action
 }
 
 extension HeroDetailViewController: HeroDetailPresenterViewProtocol {

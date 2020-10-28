@@ -10,24 +10,11 @@
 import UIKit
 import IGListKit
 
-// MARK: Protocols
-//protocol HeroProtocol {
-//    func clickedButton(_ id: String)
-//}
-
 // MARK: - HeroSectionController
 class HeroSectionController: ListSectionController {
     
-    // MARK: - Constants
-    
     // MARK: Variables
     private var identifier: HeroIdentifier?
-    //var view: HeroProtocol?
-    
-    //convenience override init() {
-    //convenience init(view: HeroProtocol?) {
-        //self.init()
-    //}
     
     override func sizeForItem(at index: Int) -> CGSize {
         guard let collectionContext = collectionContext else { return CGSize.zero }

@@ -27,10 +27,10 @@ extension ListAdapter: ListAdapterDataSource {
             
         case is HeroIdentifier:
             return HeroSectionController()
-//
-//        case is TextIdentifier:
-//            let view = viewController as? TextProtocol
-//            return TextSectionController(view: view)
+
+        case is SimilarHeroesIdentifier:
+            let view = viewController as? SimilarHeroesProtocol
+            return SimilarHeroesSectionController(view: view)
 
         default:
             return EmptySectionController()

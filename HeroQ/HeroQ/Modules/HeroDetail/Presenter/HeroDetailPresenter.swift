@@ -17,6 +17,7 @@ import RxCocoa
 protocol HeroDetailViewPresenterProtocol: ViewPresenterProtocol {
     // HeroDetail View to Presenter Protocol
     func getObsHero() -> BehaviorRelay<Hero>?
+    func getObsHeroes() -> BehaviorRelay<[Hero]>
 }
 
 protocol HeroDetailInteractorPresenterProtocol: class {
@@ -65,5 +66,9 @@ extension HeroDetailPresenter: HeroDetailViewPresenterProtocol {
     // MARK: - HeroDetail View to Presenter Protocol
     func getObsHero() -> BehaviorRelay<Hero>? {
         return interactor.getObsHero()
+    }
+    
+    func getObsHeroes() -> BehaviorRelay<[Hero]> {
+        return interactor.getObsHeroes()
     }
 }
