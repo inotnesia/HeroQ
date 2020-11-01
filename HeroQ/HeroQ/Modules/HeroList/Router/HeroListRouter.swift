@@ -17,6 +17,7 @@ import RxSwift
 protocol HeroListPresenterRouterProtocol: PresenterRouterProtocol {
     // HeroList Presenter to Router Protocol
     func goToHeroDetail(hero: Hero, similarHeroes: [Hero])
+    func goToFilter(_ roles: [RoleFilter])
 }
 
 // MARK: -
@@ -33,5 +34,10 @@ extension HeroListRouter: HeroListPresenterRouterProtocol {
     // MARK: - HeroList Presenter to Router Protocol
     func goToHeroDetail(hero: Hero, similarHeroes: [Hero]) {
         HeroDetailModule(hero: hero, heroes: similarHeroes).push(from: viewController?.navigationController)
+    }
+    
+    func goToFilter(_ roles: [RoleFilter]) {
+        guard let view = viewController as? FilterModuleProtocol else { return }
+        FilterModule(roles: roles, delegate: view).present(from: viewController, style: .coverVertical, isEmbedNavController: true)
     }
 }

@@ -34,7 +34,7 @@ class SimilarHeroesCollectionViewCell: UICollectionViewCell {
     private func _setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets.init(top: 16, left: 16, bottom: 16, right: 16)
+        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 16, bottom: 0, right: 16)
         layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 16
         
@@ -64,6 +64,6 @@ extension SimilarHeroesCollectionViewCell: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width/3, height: 100)
+        return CGSize(width: 130, height: 100)
     }
 }

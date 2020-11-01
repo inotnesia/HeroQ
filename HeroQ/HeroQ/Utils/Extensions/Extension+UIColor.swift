@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     
     static let heroQPrimaryColor = UIColor.init(hexString: "#1E5CB3")
+    static let heroQSecondaryColor = UIColor.init(hexString: "#00A65F")
     static let heroQBgColor = UIColor.init(hexString: "#EBEBE3")
     
     public convenience init(hexString: String) {

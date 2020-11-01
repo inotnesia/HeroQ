@@ -32,7 +32,6 @@ class EmptySectionController: ListSectionController {
     override func didUpdate(to object: Any) {
         identifier = object as? EmptyIdentifier
     }
-    
 }
 
 // MARK: - Empty

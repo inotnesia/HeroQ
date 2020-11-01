@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//TODO: dipake gak nih?
 extension URL {
     init(staticString string: StaticString) {
         guard let url = URL(string: "\(string)") else {

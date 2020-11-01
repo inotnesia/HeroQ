@@ -20,8 +20,11 @@ protocol HeroListViewPresenterProtocol: ViewPresenterProtocol {
     func getFetchingState() -> Driver<Bool>
     func getErrorState() -> Bool
     func getErrorInfo() -> Driver<String?>
-    func goToHeroDetail(hero: Hero, similarHeroes: [Hero])
     func getSimilarHeroes(_ hero: Hero) -> [Hero]
+    func goToHeroDetail(hero: Hero, similarHeroes: [Hero])
+    func goToFilter(_ roles: [RoleFilter])
+    func getRoles() -> [RoleFilter]
+    func filterHeroes(_ filters: [RoleFilter])
 }
 
 protocol HeroListInteractorPresenterProtocol: class {
@@ -85,11 +88,23 @@ extension HeroListPresenter: HeroListViewPresenterProtocol {
         return interactor.getErrorInfo()
     }
     
+    func getSimilarHeroes(_ hero: Hero) -> [Hero] {
+        return interactor.getSimilarHeroes(hero)
+    }
+    
     func goToHeroDetail(hero: Hero, similarHeroes: [Hero]) {
         router.goToHeroDetail(hero: hero, similarHeroes: similarHeroes)
     }
     
-    func getSimilarHeroes(_ hero: Hero) -> [Hero] {
-        return interactor.getSimilarHeroes(hero)
+    func goToFilter(_ roles: [RoleFilter]) {
+        router.goToFilter(roles)
+    }
+    
+    func getRoles() -> [RoleFilter] {
+        return interactor.getRoles()
+    }
+    
+    func filterHeroes(_ filters: [RoleFilter]) {
+        interactor.filterHeroes(filters)
     }
 }

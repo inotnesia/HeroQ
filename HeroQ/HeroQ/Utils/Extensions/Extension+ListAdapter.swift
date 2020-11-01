@@ -31,6 +31,10 @@ extension ListAdapter: ListAdapterDataSource {
         case is SimilarHeroesIdentifier:
             let view = viewController as? SimilarHeroesProtocol
             return SimilarHeroesSectionController(view: view)
+            
+        case is FilterIdentifier:
+            let view = viewController as? FilterProtocol
+            return FilterSectionController(view: view)
 
         default:
             return EmptySectionController()

@@ -24,7 +24,6 @@ class GridCollectionViewCell: UICollectionViewCell {
     }
     
     private func _setupCollectionView() {
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets.init(top: 16, left: 16, bottom: 16, right: 16)
@@ -57,7 +56,11 @@ extension GridCollectionViewCell: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.bounds.width - 48)/2, height: 120)
+        if UIApplication.shared.statusBarOrientation == .landscapeLeft || UIApplication.shared.statusBarOrientation == .landscapeRight {
+            return CGSize(width: (UIScreen.main.bounds.width - 48)/4, height: 140)
+        } else {
+            return CGSize(width: (UIScreen.main.bounds.width - 48)/2, height: 120)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

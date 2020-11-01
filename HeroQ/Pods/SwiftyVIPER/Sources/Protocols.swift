@@ -37,7 +37,8 @@ public protocol ModuleProtocol: class {
 	- parameter style: The modal transition style to use
 	- parameter completion: The code block to call when the transition completes
 	*/
-	func present(from fromVC: UIViewController?, style: UIModalTransitionStyle, completion: CodeBlock?)
+	//func present(from fromVC: UIViewController?, style: UIModalTransitionStyle, completion: CodeBlock?)
+    func present(from fromVC: UIViewController?, style: UIModalTransitionStyle, presentation: UIModalPresentationStyle, isEmbedNavController: Bool, completion: CodeBlock?)
 
 	/** Pushes the View Controller owned by the Module
 	- parameter navController: The navigation controller to push the module on

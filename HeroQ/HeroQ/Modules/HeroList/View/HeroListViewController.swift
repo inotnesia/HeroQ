@@ -100,10 +100,17 @@ class HeroListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()
+        performUpdates(animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: { context in
+            self.performUpdates(animated: true)
+        })
     }
     
     // MARK: - Custom Functions
@@ -111,6 +118,7 @@ class HeroListViewController: UIViewController {
         collectionView.constrainEdges(to: view)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
+        view.backgroundColor = .heroQBgColor
         view.setNeedsUpdateConstraints()
         
         setupNavBar()
@@ -139,15 +147,8 @@ class HeroListViewController: UIViewController {
     
     // MARK: Outlet Action
     @objc private func _filterButtonTapped(sender: UIBarButtonItem) {
-        //TODO: Implement filter here
-        print("## show filter")
-//        let categoryView = CategoryView(frame: UIScreen.main.bounds)
-//        if let categories = obsCategories {
-//            categoryView.setupView(categories)
-//        }
-//
-//        categoryView.delegate = self
-//        categoryView.show(animated: true, alpha: 0.66)
+        let roles = presenter.getRoles()
+        presenter.goToFilter(roles)
     }
 }
 
@@ -170,5 +171,13 @@ extension HeroListViewController: GridProtocol {
     func didHeroTapped(_ hero: Hero) {
         let heroes = presenter.getSimilarHeroes(hero)
         presenter.goToHeroDetail(hero: hero, similarHeroes: heroes)
+    }
+}
+
+extension HeroListViewController: FilterModuleProtocol {
+    
+    // MARK: - FilterModuleProtocol
+    func didSaveButtonTapped(_ filters: [RoleFilter]) {
+        presenter.filterHeroes(filters)
     }
 }

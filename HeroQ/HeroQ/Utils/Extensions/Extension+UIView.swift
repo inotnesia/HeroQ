@@ -15,9 +15,9 @@ extension UIView {
         if superview == nil { parent.addSubview(self) }
         self.snp.makeConstraints { (make) in
             make.top.equalTo(parent)
-            make.left.equalTo(parent)
-            make.bottom.equalTo(parent)
-            make.right.equalTo(parent)
+            make.left.equalTo(parent.safeAreaLayoutGuide)
+            make.bottom.equalTo(parent.safeAreaLayoutGuide)
+            make.right.equalTo(parent.safeAreaLayoutGuide)
         }
     }
 }

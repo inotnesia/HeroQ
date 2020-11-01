@@ -24,6 +24,8 @@ protocol HeroListPresenterInteractorProtocol {
     func getErrorState() -> Bool
     func getErrorInfo() -> Driver<String?>
     func getSimilarHeroes(_ hero: Hero) -> [Hero]
+    func getRoles() -> [RoleFilter]
+    func filterHeroes(_ filters: [RoleFilter])
 }
 
 // MARK: -
@@ -37,6 +39,8 @@ final class HeroListInteractor {
     private let _error = BehaviorRelay<String?>(value: nil)
     weak var presenter: HeroListInteractorPresenterProtocol?
     lazy var obsHeroes: BehaviorRelay<[Hero]> = BehaviorRelay(value: [])
+    private var _masterHeroes: [Hero] = []
+    lazy var obsActiveFilters: BehaviorRelay<[RoleFilter]> = BehaviorRelay(value: [])
     
     var isFetching: Driver<Bool> {
         return _isFetching.asDriver()
@@ -65,13 +69,14 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     
     // MARK: - HeroList Presenter to Interactor Protocol
     func requestTitle() {
-        presenter?.set(title: "HeroList")
+        presenter?.set(title: "Heroes")
     }
     
     func fetchHeroes() {
         HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
             self?._isFetching.accept(false)
             self?.obsHeroes.accept(response)
+            self?._masterHeroes = self?.obsHeroes.value ?? []
         }) { [weak self] (error) in
             self?._isFetching.accept(false)
             self?._error.accept(error.localizedDescription)
@@ -108,5 +113,52 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
             arrHeroes.sort { $0.baseMana > $1.baseMana }
         }
         return arrHeroes.count > 3 ? Array(arrHeroes.prefix(3)) : arrHeroes
+    }
+    
+    func getRoles() -> [RoleFilter] {
+        let allFilter = RoleFilter(id: 0, name: "All", isSelected: false)
+        var filters: [RoleFilter] = [allFilter]
+        
+        for (indexA, hero) in _masterHeroes.enumerated() {
+            var roles: [String] = []
+            roles.append(contentsOf: hero.roles)
+            for (indexB, role) in roles.enumerated() {
+                let indexStr: String = "\(indexA+1)\(indexB)"
+                let filter = RoleFilter(id: Int(indexStr) ?? -1, name: role, isSelected: false)
+                filters.append(filter)
+            }
+        }
+        filters = filters.unique { $0.name }
+        filters.sort { $0.name < $1.name }
+        
+        // TODO: cek ini lagi bro, pake obs apa gak?
+        if obsActiveFilters.value.count > 0 {
+            for activeFilter in obsActiveFilters.value {
+                for (index, filter) in filters.enumerated() where filter.name == activeFilter.name {
+                    filters[index].isSelected = activeFilter.isSelected
+                }
+            }
+        } else {
+            filters[0].isSelected = true
+        }
+        
+        return filters
+    }
+    
+    func filterHeroes(_ filters: [RoleFilter]) {
+        if filters.count > 0 {
+            if let all = filters.first, all.id == 0, all.isSelected {
+                obsHeroes.accept(_masterHeroes)
+            } else {
+                var result: [Hero] = []
+                for role in filters {
+                    let filtered = _masterHeroes.filter { $0.roles.contains(role.name) }
+                    result.append(contentsOf: filtered)
+                }
+                result = result.unique { $0.id }
+                obsHeroes.accept(result)
+            }
+        }
+        obsActiveFilters.accept(filters)
     }
 }

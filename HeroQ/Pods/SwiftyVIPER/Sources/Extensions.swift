@@ -34,10 +34,16 @@ public extension StoryboardIdentifiable where Self: UIViewController {
 }
 
 public extension ModuleProtocol {
-
-	func present(from fromVC: UIViewController?, style: UIModalTransitionStyle, completion: CodeBlock? = nil) {
-		viewController.modalTransitionStyle = style
-		fromVC?.present(viewController, animated: true, completion: completion)
+    
+	func present(from fromVC: UIViewController?, style: UIModalTransitionStyle, presentation: UIModalPresentationStyle = .fullScreen, isEmbedNavController: Bool = false, completion: CodeBlock? = nil) {
+        if isEmbedNavController {
+            let navController = UINavigationController(rootViewController: viewController)
+            navController.modalPresentationStyle = presentation
+            fromVC?.present(navController, animated: true, completion: completion)
+        } else {
+            viewController.modalTransitionStyle = style
+            fromVC?.present(viewController, animated: true, completion: completion)
+        }
 	}
 
 	func push(from navController: UINavigationController?) {
