@@ -124,6 +124,7 @@ class HeroListViewController: UIViewController {
         setupNavBar()
         setupBackButton()
         _setupFilterButton()
+        _setupRefreshButton()
         _setupActivityIndicator()
         _setupInfoLabel()
     }
@@ -132,6 +133,12 @@ class HeroListViewController: UIViewController {
         let button = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(_filterButtonTapped(sender:)))
         button.tintColor = .white
         navigationItem.setLeftBarButton(button, animated: true)
+    }
+    
+    private func _setupRefreshButton() {
+        let button = UIBarButtonItem(image: UIImage(named: "refresh"), style: .plain, target: self, action: #selector(_refreshButtonTapped(sender:)))
+        button.tintColor = .white
+        navigationItem.setRightBarButton(button, animated: true)
     }
     
     private func _setupActivityIndicator() {
@@ -149,6 +156,10 @@ class HeroListViewController: UIViewController {
     @objc private func _filterButtonTapped(sender: UIBarButtonItem) {
         let roles = presenter.getRoles()
         presenter.goToFilter(roles)
+    }
+    
+    @objc private func _refreshButtonTapped(sender: UIBarButtonItem) {
+        presenter.viewLoaded()
     }
 }
 
