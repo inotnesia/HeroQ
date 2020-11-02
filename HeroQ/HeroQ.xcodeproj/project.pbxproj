@@ -25,6 +25,9 @@
 		187A29372549B09C006D02D2 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A29352549B09C006D02D2 /* ButtonCollectionViewCell.swift */; };
 		187A29382549B09C006D02D2 /* ButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187A29362549B09C006D02D2 /* ButtonCollectionViewCell.xib */; };
 		187A293A254A3543006D02D2 /* CollectionViewCenterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2939254A3543006D02D2 /* CollectionViewCenterLayout.swift */; };
+		187A293D254F7A26006D02D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A293C254F7A26006D02D2 /* NetworkManager.swift */; };
+		187A293F254FBCE2006D02D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A293E254FBCE2006D02D2 /* Extension+UIAlertController.swift */; };
+		187A2941254FBE8F006D02D2 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2940254FBE8F006D02D2 /* Extension+UIImage.swift */; };
 		18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D12548042000ED7702 /* HeroDetailModule.swift */; };
 		18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D32548042000ED7702 /* HeroDetailPresenter.swift */; };
 		18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D52548042000ED7702 /* HeroDetailAdapter.swift */; };
@@ -106,6 +109,9 @@
 		187A29352549B09C006D02D2 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		187A29362549B09C006D02D2 /* ButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		187A2939254A3543006D02D2 /* CollectionViewCenterLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCenterLayout.swift; sourceTree = "<group>"; };
+		187A293C254F7A26006D02D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		187A293E254FBCE2006D02D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
+		187A2940254FBE8F006D02D2 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		18A681D12548042000ED7702 /* HeroDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailModule.swift; sourceTree = "<group>"; };
 		18A681D32548042000ED7702 /* HeroDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailPresenter.swift; sourceTree = "<group>"; };
 		18A681D52548042000ED7702 /* HeroDetailAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailAdapter.swift; sourceTree = "<group>"; };
@@ -292,6 +298,14 @@
 				187A29362549B09C006D02D2 /* ButtonCollectionViewCell.xib */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		187A293B254F79D7006D02D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				187A293C254F7A26006D02D2 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		18A681CF2548042000ED7702 /* HeroDetail */ = {
@@ -494,6 +508,7 @@
 		18EB8B992545E7C900592A59 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				187A293B254F79D7006D02D2 /* Network */,
 				18EB8BA72545EB5600592A59 /* ViewComponents */,
 				18EB8B9A2545E80600592A59 /* Extensions */,
 			);
@@ -512,6 +527,8 @@
 				18EB8BB32545ECC800592A59 /* NSObject+IGListDiffable.swift */,
 				18FB22C32546C818003A6638 /* Extension+URL.swift */,
 				187A292525498286006D02D2 /* Extension+Array.swift */,
+				187A293E254FBCE2006D02D2 /* Extension+UIAlertController.swift */,
+				187A2940254FBE8F006D02D2 /* Extension+UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -808,6 +825,7 @@
 				18EB8B962545E71700592A59 /* HeroListViewController.swift in Sources */,
 				18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */,
 				18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */,
+				187A293D254F7A26006D02D2 /* NetworkManager.swift in Sources */,
 				18A681E12548042000ED7702 /* HeroDetailRouter.swift in Sources */,
 				18EB8BA62545EAF500592A59 /* Extension+ListAdapter.swift in Sources */,
 				18A681E02548042000ED7702 /* HeroDetailInteractor.swift in Sources */,
@@ -831,6 +849,7 @@
 				18FB22D125475FC5003A6638 /* ImageCollectionViewCell.swift in Sources */,
 				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,
 				187A29332549AA54006D02D2 /* FilterCollectionViewCell.swift in Sources */,
+				187A2941254FBE8F006D02D2 /* Extension+UIImage.swift in Sources */,
 				187A292825498FAD006D02D2 /* RoleFilter.swift in Sources */,
 				18EB8BA02545E86B00592A59 /* Extension+UIViewController.swift in Sources */,
 				187A292425496E39006D02D2 /* FilterRouter.swift in Sources */,
@@ -845,6 +864,7 @@
 				18EB8BA22545E88400592A59 /* Extension+UINavigationController.swift in Sources */,
 				18EB8BB12545EC6C00592A59 /* EmptyCollectionViewCell.swift in Sources */,
 				18EB8BA42545E8A000592A59 /* Extension+UIView.swift in Sources */,
+				187A293F254FBCE2006D02D2 /* Extension+UIAlertController.swift in Sources */,
 				187A292025496E39006D02D2 /* FilterPresenter.swift in Sources */,
 				187A29302549AA14006D02D2 /* FilterSectionController.swift in Sources */,
 				187A29082548EF38006D02D2 /* SimilarHeroesSectionController.swift in Sources */,

@@ -73,13 +73,17 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     }
     
     func fetchHeroes() {
-        HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
-            self?._isFetching.accept(false)
-            self?.obsHeroes.accept(response)
-            self?._masterHeroes = self?.obsHeroes.value ?? []
-        }) { [weak self] (error) in
-            self?._isFetching.accept(false)
-            self?._error.accept(error.localizedDescription)
+        if NetworkManager.shared.isConnectedToInternet() {
+            HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
+                self?._isFetching.accept(false)
+                self?.obsHeroes.accept(response)
+                self?._masterHeroes = self?.obsHeroes.value ?? []
+            }) { [weak self] (error) in
+                self?._isFetching.accept(false)
+                self?._error.accept(error.localizedDescription)
+            }
+        } else {
+            presenter?.showNoInternetAlert()
         }
     }
     

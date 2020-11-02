@@ -31,6 +31,7 @@ protocol HeroListInteractorPresenterProtocol: class {
     // HeroList Interactor to Presenter Protocol
     func set(title: String?)
     func performUpdates(animated: Bool)
+    func showNoInternetAlert()
 }
 
 // MARK: -
@@ -66,6 +67,10 @@ extension HeroListPresenter: HeroListInteractorPresenterProtocol {
     
     func performUpdates(animated: Bool) {
         view?.performUpdates(animated: animated)
+    }
+    
+    func showNoInternetAlert() {
+        view?.showNoInternetAlert()
     }
 }
 

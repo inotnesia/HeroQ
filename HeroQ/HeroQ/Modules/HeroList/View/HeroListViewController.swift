@@ -19,6 +19,7 @@ protocol HeroListPresenterViewProtocol: class {
     // HeroList Presenter to View Protocol
     func set(title: String?)
     func performUpdates(animated: Bool)
+    func showNoInternetAlert()
 }
 
 // MARK: -
@@ -173,6 +174,18 @@ extension HeroListViewController: HeroListPresenterViewProtocol {
     func performUpdates(animated: Bool) {
         adapter.setupListDiffable()
         adapter.performUpdates(animated: animated, completion: nil)
+    }
+    
+    func showNoInternetAlert() {
+        let alert = UIAlertController(title: "No Internet Connection", message: "It seems you're go offline", preferredStyle: .alert)
+        if let image = UIImage(named: "dino") {
+            alert.addImage(image)
+        }
+        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { action in
+            self.presenter.viewLoaded()
+        }))
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
