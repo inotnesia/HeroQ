@@ -24,6 +24,8 @@ class HeroCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var roleLabel: UILabel!
     
+    @IBOutlet weak var statsLabel: UILabel!
+    
     @IBOutlet weak var attackImageView: UIImageView!
     @IBOutlet weak var attackLabel: UILabel!
     
@@ -53,6 +55,9 @@ class HeroCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 8
         roleLabel.text = hero.roles.joined(separator: " - ")
         roleLabel.textColor = .heroQPrimaryColor
+        
+        statsLabel.text = "Hero Stats"
+        statsLabel.textColor = .heroQPrimaryColor
         
         attackImageView.image = UIImage(named: "sword")
         attackLabel.text = "\(hero.baseAttackMin) - \(hero.baseAttackMax)"

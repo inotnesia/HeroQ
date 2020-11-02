@@ -34,7 +34,7 @@ class HeroDetailAdapter: ListAdapter {
         var list: [ListDiffable] = []
         
         if let hero = obsHero?.value {
-            list.append(HeroIdentifier(height: 399, hero: hero))
+            list.append(HeroIdentifier(height: 452, hero: hero))
         }
         if obsHeroes?.value.count ?? 0 > 0 {
             list.append(SimilarHeroesIdentifier(height: 136, heroes: obsHeroes?.value ?? []))

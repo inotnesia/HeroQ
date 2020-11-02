@@ -63,6 +63,17 @@ final class HeroListInteractor {
             self.presenter?.performUpdates(animated: true)
         }).disposed(by: _disposeBag)
     }
+    
+    private func _getLocalHeroes() {
+        let heroes = RealmHelper.shared.getHeroes()
+        if heroes.count > 0 {
+            obsHeroes.accept(heroes)
+        }
+    }
+    
+    private func _saveHeroes(_ heroes: [Hero]) {
+        RealmHelper.shared.saveHeroes(heroes)
+    }
 }
 
 extension HeroListInteractor: HeroListPresenterInteractorProtocol {
@@ -73,11 +84,13 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     }
     
     func fetchHeroes() {
+        _getLocalHeroes()
         if NetworkManager.shared.isConnectedToInternet() {
             HeroService.shared.fetchHeroes(successHandler: { [weak self] (response) in
                 self?._isFetching.accept(false)
                 self?.obsHeroes.accept(response)
                 self?._masterHeroes = self?.obsHeroes.value ?? []
+                self?._saveHeroes(self?.obsHeroes.value ?? [])
             }) { [weak self] (error) in
                 self?._isFetching.accept(false)
                 self?._error.accept(error.localizedDescription)

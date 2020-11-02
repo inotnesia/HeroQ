@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+        
+        // Get Realm File Location
+        #if DEBUG
+        autoreleasepool {
+            do {
+                let realm = try Realm(configuration: RealmHelper.config)
+                print(realm.configuration.fileURL ?? "")
+            } catch let error as NSError {
+                print("Realm Error: \(error)")
+            }
+        }
+        #endif
+        
         return true
     }
 

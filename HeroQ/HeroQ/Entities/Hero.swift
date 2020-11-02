@@ -24,4 +24,25 @@ struct Hero: Codable {
     var imageURL: URL {
         return URL(string: "\(HeroService.shared.baseAPIURL)\(img)")!
     }
+    
+    init(rlmHero: RLMHero) {
+        self.id = rlmHero.id
+        self.localizedName = rlmHero.localizedName ?? ""
+        self.attackType = rlmHero.attackType ?? ""
+        
+        var roles: [String] = []
+        for role in rlmHero.roles {
+            roles.append(role)
+        }
+        self.roles = roles
+        
+        self.baseAttackMin = rlmHero.baseAttackMin
+        self.baseAttackMax = rlmHero.baseAttackMax
+        self.baseArmor = rlmHero.baseArmor
+        self.moveSpeed = rlmHero.moveSpeed
+        self.baseHealth = rlmHero.baseHealth
+        self.baseMana = rlmHero.baseMana
+        self.primaryAttr = rlmHero.primaryAttr ?? ""
+        self.img = rlmHero.img ?? ""
+    }
 }

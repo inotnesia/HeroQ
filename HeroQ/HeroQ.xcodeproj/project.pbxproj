@@ -28,6 +28,8 @@
 		187A293D254F7A26006D02D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A293C254F7A26006D02D2 /* NetworkManager.swift */; };
 		187A293F254FBCE2006D02D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A293E254FBCE2006D02D2 /* Extension+UIAlertController.swift */; };
 		187A2941254FBE8F006D02D2 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2940254FBE8F006D02D2 /* Extension+UIImage.swift */; };
+		187A2944254FC4F6006D02D2 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2943254FC4F6006D02D2 /* RealmHelper.swift */; };
+		187A2946254FC5C4006D02D2 /* RLMHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2945254FC5C4006D02D2 /* RLMHero.swift */; };
 		18A681DC2548042000ED7702 /* HeroDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D12548042000ED7702 /* HeroDetailModule.swift */; };
 		18A681DD2548042000ED7702 /* HeroDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D32548042000ED7702 /* HeroDetailPresenter.swift */; };
 		18A681DE2548042000ED7702 /* HeroDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A681D52548042000ED7702 /* HeroDetailAdapter.swift */; };
@@ -112,6 +114,8 @@
 		187A293C254F7A26006D02D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		187A293E254FBCE2006D02D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		187A2940254FBE8F006D02D2 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		187A2943254FC4F6006D02D2 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		187A2945254FC5C4006D02D2 /* RLMHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMHero.swift; sourceTree = "<group>"; };
 		18A681D12548042000ED7702 /* HeroDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailModule.swift; sourceTree = "<group>"; };
 		18A681D32548042000ED7702 /* HeroDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailPresenter.swift; sourceTree = "<group>"; };
 		18A681D52548042000ED7702 /* HeroDetailAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailAdapter.swift; sourceTree = "<group>"; };
@@ -306,6 +310,14 @@
 				187A293C254F7A26006D02D2 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		187A2942254FC4C4006D02D2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				187A2943254FC4F6006D02D2 /* RealmHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		18A681CF2548042000ED7702 /* HeroDetail */ = {
@@ -508,6 +520,7 @@
 		18EB8B992545E7C900592A59 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				187A2942254FC4C4006D02D2 /* Helper */,
 				187A293B254F79D7006D02D2 /* Network */,
 				18EB8BA72545EB5600592A59 /* ViewComponents */,
 				18EB8B9A2545E80600592A59 /* Extensions */,
@@ -570,6 +583,7 @@
 			children = (
 				18FB22C12546B198003A6638 /* Hero.swift */,
 				187A292725498FAD006D02D2 /* RoleFilter.swift */,
+				187A2945254FC5C4006D02D2 /* RLMHero.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -832,6 +846,7 @@
 				18EB8B9E2545E84E00592A59 /* Extension+UIColor.swift in Sources */,
 				187A292B2549A74B006D02D2 /* HQButton.swift in Sources */,
 				18EB8B952545E71700592A59 /* HeroListAdapter.swift in Sources */,
+				187A2944254FC4F6006D02D2 /* RealmHelper.swift in Sources */,
 				18EB8BB42545ECC800592A59 /* NSObject+IGListDiffable.swift in Sources */,
 				187A292225496E39006D02D2 /* FilterViewController.swift in Sources */,
 				18EB8B982545E71700592A59 /* HeroListRouter.swift in Sources */,
@@ -846,6 +861,7 @@
 				18A681E62548134C00ED7702 /* HeroSectionController.swift in Sources */,
 				18A681DF2548042000ED7702 /* HeroDetailViewController.swift in Sources */,
 				187A290B2548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift in Sources */,
+				187A2946254FC5C4006D02D2 /* RLMHero.swift in Sources */,
 				18FB22D125475FC5003A6638 /* ImageCollectionViewCell.swift in Sources */,
 				18FB22C92546CC0E003A6638 /* HeroService.swift in Sources */,
 				187A29332549AA54006D02D2 /* FilterCollectionViewCell.swift in Sources */,
