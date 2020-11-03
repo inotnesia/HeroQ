@@ -148,7 +148,6 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
         filters = filters.unique { $0.name }
         filters.sort { $0.name < $1.name }
         
-        // TODO: cek ini lagi bro, pake obs apa gak?
         if obsActiveFilters.value.count > 0 {
             for activeFilter in obsActiveFilters.value {
                 for (index, filter) in filters.enumerated() where filter.name == activeFilter.name {
