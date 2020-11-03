@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183A5259255055C000065274 /* HeroListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A5258255055C000065274 /* HeroListPresenterTests.swift */; };
+		183A525C25511A8900065274 /* MockHeroListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A525B25511A8900065274 /* MockHeroListModule.swift */; };
+		183A525E25511BCD00065274 /* heroesresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 183A525D25511BCD00065274 /* heroesresponse.json */; };
+		183A526025511DF000065274 /* MockHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A525F25511DF000065274 /* MockHeroes.swift */; };
+		183A526225511F8300065274 /* MockHeroServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A526125511F8300065274 /* MockHeroServiceProtocol.swift */; };
+		183A526325512E8900065274 /* heroesresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 183A525D25511BCD00065274 /* heroesresponse.json */; };
 		187A29082548EF38006D02D2 /* SimilarHeroesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A29072548EF37006D02D2 /* SimilarHeroesSectionController.swift */; };
 		187A290B2548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A29092548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift */; };
 		187A290C2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187A290A2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib */; };
@@ -93,6 +99,11 @@
 
 /* Begin PBXFileReference section */
 		0AE84BDE542EDD427880C99B /* Pods-HeroQUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroQUITests.debug.xcconfig"; path = "Target Support Files/Pods-HeroQUITests/Pods-HeroQUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		183A5258255055C000065274 /* HeroListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListPresenterTests.swift; sourceTree = "<group>"; };
+		183A525B25511A8900065274 /* MockHeroListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroListModule.swift; sourceTree = "<group>"; };
+		183A525D25511BCD00065274 /* heroesresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroesresponse.json; sourceTree = "<group>"; };
+		183A525F25511DF000065274 /* MockHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroes.swift; sourceTree = "<group>"; };
+		183A526125511F8300065274 /* MockHeroServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroServiceProtocol.swift; sourceTree = "<group>"; };
 		187A29072548EF37006D02D2 /* SimilarHeroesSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimilarHeroesSectionController.swift; sourceTree = "<group>"; };
 		187A29092548F002006D02D2 /* SimilarHeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarHeroesCollectionViewCell.swift; sourceTree = "<group>"; };
 		187A290A2548F002006D02D2 /* SimilarHeroesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarHeroesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -210,6 +221,25 @@
 				4727D0ED901D521A37D965CB /* Pods-HeroQUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		183A52572550508D00065274 /* HeroList */ = {
+			isa = PBXGroup;
+			children = (
+				183A5258255055C000065274 /* HeroListPresenterTests.swift */,
+			);
+			path = HeroList;
+			sourceTree = "<group>";
+		};
+		183A525A25511A1F00065274 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				183A525B25511A8900065274 /* MockHeroListModule.swift */,
+				183A526125511F8300065274 /* MockHeroServiceProtocol.swift */,
+				183A525F25511DF000065274 /* MockHeroes.swift */,
+				183A525D25511BCD00065274 /* heroesresponse.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		187A29062548EF37006D02D2 /* SimilarHeroes */ = {
@@ -431,6 +461,8 @@
 		18CE1B0F254586A40037D007 /* HeroQTests */ = {
 			isa = PBXGroup;
 			children = (
+				183A525A25511A1F00065274 /* Mock */,
+				183A52572550508D00065274 /* HeroList */,
 				18CE1B10254586A40037D007 /* HeroQTests.swift */,
 				18CE1B12254586A40037D007 /* Info.plist */,
 			);
@@ -733,6 +765,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183A526325512E8900065274 /* heroesresponse.json in Resources */,
 				18CE1B06254586A40037D007 /* LaunchScreen.storyboard in Resources */,
 				18CE1B03254586A40037D007 /* Assets.xcassets in Resources */,
 				187A29382549B09C006D02D2 /* ButtonCollectionViewCell.xib in Resources */,
@@ -749,6 +782,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183A525E25511BCD00065274 /* heroesresponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,7 +927,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183A5259255055C000065274 /* HeroListPresenterTests.swift in Sources */,
+				183A525C25511A8900065274 /* MockHeroListModule.swift in Sources */,
 				18CE1B11254586A40037D007 /* HeroQTests.swift in Sources */,
+				183A526025511DF000065274 /* MockHeroes.swift in Sources */,
+				183A526225511F8300065274 /* MockHeroServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
