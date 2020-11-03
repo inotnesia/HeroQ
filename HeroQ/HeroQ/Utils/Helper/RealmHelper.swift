@@ -32,13 +32,21 @@ class RealmHelper {
         do {
             let realm = try Realm(configuration: RealmHelper.config)
             for rlmHero in realm.objects(RLMHero.self) {
-                let hero = Hero(rlmHero: rlmHero)
+                let hero = _setHero(rlmHero)
                 heroes.append(hero)
             }
         } catch let error as NSError {
             print("Realm Error: \(error)")
         }
         return heroes
+    }
+    
+    private func _setHero(_ rlmHero: RLMHero) -> Hero {
+        var roles: [String] = []
+        for role in rlmHero.roles {
+            roles.append(role)
+        }
+        return Hero(id: rlmHero.id, localizedName: rlmHero.localizedName ?? "", attackType: rlmHero.attackType ?? "", roles: roles, baseAttackMin: rlmHero.baseAttackMin, baseAttackMax: rlmHero.baseAttackMax, baseArmor: rlmHero.baseArmor, moveSpeed: rlmHero.moveSpeed, baseHealth: rlmHero.baseHealth, baseMana: rlmHero.baseMana, primaryAttr: rlmHero.primaryAttr ?? "", img: rlmHero.img ?? "")
     }
     
     static let config = Realm.Configuration(
