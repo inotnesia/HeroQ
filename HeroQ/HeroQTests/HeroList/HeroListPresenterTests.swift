@@ -56,12 +56,12 @@ class HeroListPresenterTests: XCTestCase {
     
     func testGoToHeroDetail() {
         presenter?.goToHeroDetail(hero: stubHero, similarHeroes: [])
-        XCTAssertTrue(router?.goToHeroDetailCalled ?? false)
+        XCTAssertTrue(router?.isGoToHeroDetailCalled ?? false)
     }
     
     func testGoToFilter() {
         presenter?.goToFilter(stubRoles)
-        XCTAssertTrue(router?.goToFilterCalled ?? false)
+        XCTAssertTrue(router?.isGoToFilterCalled ?? false)
     }
     
     func testGetSimilarHeroes() throws {
@@ -120,8 +120,8 @@ class HeroListPresenterTests: XCTestCase {
 
 extension HeroListPresenterTests {
     class MockHeroListRouter: HeroListPresenterRouterProtocol {
-        var goToHeroDetailCalled = false
-        var goToFilterCalled = false
+        var isGoToHeroDetailCalled = false
+        var isGoToFilterCalled = false
         
         func present(_ view: UIViewController, completion: CodeBlock?) {}
         
@@ -133,11 +133,11 @@ extension HeroListPresenterTests {
         }
         
         func goToHeroDetail(hero: Hero, similarHeroes: [Hero]) {
-            goToHeroDetailCalled = true
+            isGoToHeroDetailCalled = true
         }
         
         func goToFilter(_ roles: [RoleFilter]) {
-            goToFilterCalled = true
+            isGoToFilterCalled = true
         }
     }
     
