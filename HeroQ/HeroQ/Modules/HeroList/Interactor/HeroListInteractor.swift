@@ -119,8 +119,12 @@ extension HeroListInteractor: HeroListPresenterInteractorProtocol {
     func getSimilarHeroes(_ hero: Hero) -> [Hero] {
         var arrHeroes = obsHeroes.value.filter {
                 $0.id != hero.id &&
-                $0.primaryAttr == hero.primaryAttr &&
-                $0.roles.contains(hero.roles.first ?? "")
+                $0.primaryAttr == hero.primaryAttr
+        }
+        for role in hero.roles {
+            arrHeroes = arrHeroes.filter {
+                $0.roles.contains(role)
+            }
         }
         if hero.primaryAttr == "agi" {
             arrHeroes.sort { $0.moveSpeed > $1.moveSpeed }
